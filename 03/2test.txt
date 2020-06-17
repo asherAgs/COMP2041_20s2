@@ -1,0 +1,15 @@
+Course Summary
+This course is designed for students who have mastered the basics of programming. It aims to broaden your knowledge of techniques and tools for software construction.
+
+Assumed Knowledge
+Before commencing this course, students should ...
+
+have a sound understanding of a procedural programming language such as C or Python;
+be able to produce a correct procedural program from a spec;
+have an understanding of fundamental data structures and algorithms (sorting, searching);
+appreciate the use of abstraction in computing.
+For undergraduate (COMP2042) students, the above material will typically have been covered in COMP1511 (or its predecessor, COMP1917) and COMP2521 (or its predecessor, COMP1927).
+
+For postgraduate (COMP9042) students, the above material will have been covered in COMP9021 and COMP9024, or in equivalent courses in their undergraduate degree.
+
+A significant fraction of the class has previously used the C programming language, and some knowledge of that language may be assumed during some lecture examples. Students who have not programmed C (or C++) may need to do some extra reading to understand these examples.

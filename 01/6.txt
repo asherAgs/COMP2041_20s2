@@ -1,0 +1,5 @@
+Give five reasons why this attempt to search a file for HTML paragraph and break tags may fail.
+
+    grep <p>|<br> /tmp/index.html
+
+

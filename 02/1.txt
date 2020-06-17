@@ -1,0 +1,6 @@
+Imagine that we have just typed a shell script into the file my_first_shell_script.sh in the current directory. We then attempt to execute the script and observe the following:
+
+my_first_shell_script.sh
+my_first_shell_script.sh: command not found
+
+Explain the possible causes for this, and describe how to rectify them.

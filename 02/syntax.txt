@@ -1,0 +1,19 @@
+
+$var
+
+$#  --> num of args
+  vs
+$@  --> arg vector
+
+$?  -> exit status
+
+$0  --> 
+$1 --> 1st arg
+$2 --> 2nd arg
+
+
+SHELL:
+* == "anything"
+
+REGEX:
+* == "the previous expr 0 or more times"

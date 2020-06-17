@@ -1,0 +1,2942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<title>
+COMP2041 20T2 —
+
+Software Construction
+
+</title><link rel="canonical" href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha256-aAr2Zpq8MZ+YA/D6JtRD3xtrwpEz2IqOS+pWD/7XKIw=" crossorigin="anonymous" />
+<link rel="stylesheet" href="/~cs2041/20T2/flask.cgi/static/course.css?196351591059249.382498" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"
+        integrity="sha256-/ijcOLwFf26xEYAjW75FizKVo5tnTYiQddPZoLUHHZ8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha256-OFRAJNoaD8L3Br5lglV7VyLRf0itmoBzWUoM+Sji4/8=" crossorigin="anonymous"></script>
+
+<script src="/~cs2041/20T2/flask.cgi/static/course.js?92151589967811.0"></script>
+
+<!-- <script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
+
+<!-- MathJax. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-MML-AM_CHTML" async="yes"></script>
+
+
+
+
+
+</head>
+<body class="d-flex flex-column" style="min-height: 100vh;">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light no-print" id="header-navbar">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right"
+            type="button" data-toggle="collapse" data-target="#navmenu"
+            aria-controls="navmenu" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/">
+      COMP(2041|9044) 20T2
+    </a>
+
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/outline">Outline</a></li>
+        <li class="nav-item active"><a class="nav-link" href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/student/">Submissions</a></li>
+        <li class="nav-item active"><a class="nav-link" href="https://discourse.cse.unsw.edu.au/cs2041/">Forum</a></li>
+        
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<main class="container" aria-label="Content" style="flex: 1; padding-top: 4rem;">
+
+
+<header>
+
+<h1 class="text-center">
+Software Construction
+</h1>
+
+</header>
+
+<ul class="list-inline text-center text-muted">
+<li class="list-inline-item">Jump to...</li>
+<li class="list-inline-item"><a href="#course-resources">Resources</a></li>
+<li class="list-inline-item"><a href="#by-week">By Week</a></li>
+<li class="list-inline-item"><a href="#by-topic">By Topic</a></li>
+<li class="list-inline-item"><a href="#all-links">All Links</a></li>
+</ul>
+
+
+<section class="homepage-section" id="course-resources">
+<h2>Course Resources</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="row">
+
+  <dt class="col-4 text-right">Administrivia</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/outline">Outline</a>
+      </li><li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/timetable">Timetable</a>
+      </li><li class="list-inline-item">
+        <a href="https://www.handbook.unsw.edu.au/undergraduate/courses/current/COMP2041.html">COMP2041 Handbook</a>
+      </li><li class="list-inline-item">
+        <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/current/COMP9044.html">COMP9044 Handbook</a>
+      </li>
+    </ul>
+  </dd>
+
+  <dt class="col-4 text-right">Resources</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+        <a href="https://discourse.cse.unsw.edu.au/cs2041/">Course Forum</a>
+      </li>
+    </ul>
+  </dd>
+
+  <dt class="col-4 text-right">Platforms</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/lec/">Lectures (via Teams)</a>
+      </li><li class="list-inline-item">
+        <a href="https://moodle.telt.unsw.edu.au/course/view.php?id=51281">Tut-Labs (via BbCollaborate)</a>
+      </li>
+    </ul>
+  </dd>
+
+  <dt class="col-4 text-right">Lab/Test/Assignment</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/student/">View Autotests/Submissions/Marking</a>
+      </li><li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~give/Student/sturec.php">View Marks</a>
+      </li><li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~give/Student/give.php">Give Web</a>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+</section>
+
+
+
+<section class="homepage-section" id="by-week">
+<h2>Week-by-Week</h2>
+
+<ul class="nav nav-tabs" id="by-week-tabs" role="tablist">
+
+<li class="nav-item">
+  <a class="nav-link active" role="tab"
+     href="#week01" id="week01-tab" data-toggle="tab" aria-controls="week01"
+     aria-selected="true">
+    Week 1
+  </a>
+</li>
+
+</ul>
+
+
+<div class="tab-content" id="by-week-content"><div class="tab-pane active mt-2"
+     id="week01" role="tabpanel" aria-labelledby="week01-tab">
+
+                
+                
+
+    
+<dl class="row">
+
+  <dt class="col-6 text-right">Tutorial</dt>
+  <dd class="col-6">
+    <ul class="list-unstyled mb-0">
+    <li>
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/tut/01/questions">Questions</a>
+      </li>
+    </ul>
+  </dd>
+
+  <dt class="col-6 text-right">Laboratory</dt>
+  <dd class="col-6">
+    <ul class="list-unstyled mb-0">
+    <li>
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/lab/01/questions">Exercises</a>
+      </li>
+    </ul>
+  </dd>
+
+  <dt class="col-6 text-right">Tuesday June 02 Lecture Topics</dt>
+  <dd class="col-6">
+    <ul class="list-unstyled mb-0">
+    <li>
+        <a href="#topic_course_overview">Course Overview</a>
+      </li><li>
+        <a href="#topic_filters">Filters</a>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+</div>
+</div>
+</section>
+
+
+
+<section class="homepage-section" id="by-topic">
+<h2>Topic-by-Topic</h2>
+
+<ul class="nav nav-tabs" id="by-topic-tabs" role="tablist">
+<li class="nav-item">
+  <a class="nav-link" role="tab"
+     href="#topic_course_overview" id="course_overview-tab" data-toggle="tab" aria-controls="course_overview"
+     aria-selected="false">
+    Course Overview
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link active" role="tab"
+     href="#topic_filters" id="filters-tab" data-toggle="tab" aria-controls="filters"
+     aria-selected="true">
+    Filters
+  </a>
+</li>
+</ul>
+<div class="tab-content" id="by-topic-content"><div class="tab-pane mt-2"
+     id="topic_course_overview" role="tabpanel" aria-labelledby="topic_course_overview-tab">
+
+
+            
+<dl class="row">
+
+  <dt class="col-4 text-right">Course Overview</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/lec/course_overview/slides">slides</a>
+      </li><li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/lec/course_overview/notes">notes</a>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+                
+<div class="accordion" id="accordion-course_overview">
+
+</div>
+</div><div class="tab-pane active mt-2"
+     id="topic_filters" role="tabpanel" aria-labelledby="topic_filters-tab">
+
+
+            
+<dl class="row">
+
+  <dt class="col-4 text-right">Filters</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/lec/filters/slides">slides</a>
+      </li><li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/lec/filters/notes">notes</a>
+      </li><li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters/index">code</a>
+      </li><li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters/command_line_examples.html">Command Line Examples</a>
+      </li>
+    </ul>
+  </dd>
+
+</dl><a href="https://regex101.com/">regex1011: online regex tester</a>
+            
+
+            <ul class="nav nav-tabs" id="topic-filters-tabs" role="tablist"><li class="nav-item">
+  <a class="nav-link active" role="tab"
+     href="#topic-filters-tab-programs" id="Programs-tab" data-toggle="tab" aria-controls="Programs"
+     aria-selected="true">
+    Programs
+  </a>
+</li><li class="nav-item">
+  <a class="nav-link" role="tab"
+     href="#topic-filters-tab-command_line_examples" id="topic-filters-tab-command_line_examples-tab" data-toggle="tab" aria-controls="topic-filters-tab-command_line_examples"
+     aria-selected="false">
+    Command Line Examples
+  </a>
+</li>
+            </ul>
+
+            <div class="tab-content" id="topic-filters-content"><div class="tab-pane active mt-2"
+     id="topic-filters-tab-programs" role="tabpanel" aria-labelledby="topic-filters-tab-programs-tab">
+
+<div class="accordion" id="accordion-filters">
+
+
+    
+    
+    
+    <div class="card my-0 rounded-0">
+        <div class="card-header" id="topic-filters-cat__c-header">
+            <button class="btn btn-link"
+                data-toggle="collapse" data-target="#topic-filters-cat__c"
+                aria-expanded="false" aria-controls="topic-filters-cat__c">
+            Filters example:
+            <samp>cat.c</samp>
+            <small>(Tuesday June 02 lecture)</small>
+            </button>
+        </div>
+
+        <div class="collapse" id="topic-filters-cat__c" aria-labelledby="topic-filters-cat__c-header" data-parent="#accordion-filters">
+            <div class="card-body mb-0 pb-0">
+                <div class="header_comment">
+                    
+<br>Simple /bin/cat emulation.
+<br>
+
+                </div>
+
+                
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// write bytes of stream to stdout</span>
+<span class="kt">void</span> <span class="nf">process_stream</span><span class="p">(</span><span class="kt">FILE</span> <span class="o">*</span><span class="n">in</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">fgetc</span><span class="p">(</span><span class="n">in</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="n">EOF</span><span class="p">)</span>
+             <span class="k">break</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">fputc</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">stdout</span><span class="p">)</span> <span class="o">==</span> <span class="n">EOF</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;cat:&quot;</span><span class="p">);</span>
+            <span class="n">perror</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+            <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// process files given as arguments</span>
+<span class="c1">// if no arguments process stdin</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">process_stream</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+    <span class="k">else</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">argc</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">FILE</span> <span class="o">*</span><span class="n">in</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s">&quot;r&quot;</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">in</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;%s: %s: &quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+                <span class="n">perror</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+                <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">process_stream</span><span class="p">(</span><span class="n">in</span><span class="p">);</span>
+            <span class="n">fclose</span><span class="p">(</span><span class="n">in</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+                <p class="m-3">
+                    <a class="btn btn-outline-dark" target="source" href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters/cat.c">Download <code>cat.c</code></a>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    
+    
+    <div class="card my-0 rounded-0">
+        <div class="card-header" id="topic-filters-wc__c-header">
+            <button class="btn btn-link"
+                data-toggle="collapse" data-target="#topic-filters-wc__c"
+                aria-expanded="false" aria-controls="topic-filters-wc__c">
+            Filters example:
+            <samp>wc.c</samp>
+            <small>(Tuesday June 02 lecture)</small>
+            </button>
+        </div>
+
+        <div class="collapse" id="topic-filters-wc__c" aria-labelledby="topic-filters-wc__c-header" data-parent="#accordion-filters">
+            <div class="card-body mb-0 pb-0">
+                <div class="header_comment">
+                    
+<br>Simple /usr/bin/wc emulation.
+<br>
+
+                </div>
+
+                
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;ctype.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// count lines, words, chars in stream</span>
+<span class="kt">void</span> <span class="nf">process_stream</span><span class="p">(</span><span class="kt">FILE</span> <span class="o">*</span><span class="n">in</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n_lines</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n_words</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n_chars</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">in_word</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">((</span><span class="n">c</span> <span class="o">=</span> <span class="n">fgetc</span><span class="p">(</span><span class="n">in</span><span class="p">))</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">n_chars</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;\n&#39;</span><span class="p">)</span>
+            <span class="n">n_lines</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">isspace</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+            <span class="n">in_word</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">in_word</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">in_word</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">n_words</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%6d %6d %6d&quot;</span><span class="p">,</span> <span class="n">n_lines</span><span class="p">,</span> <span class="n">n_words</span><span class="p">,</span> <span class="n">n_chars</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// process files given as arguments</span>
+<span class="c1">// if no arguments process stdin</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">process_stream</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+    <span class="k">else</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">argc</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">FILE</span> <span class="o">*</span><span class="n">in</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s">&quot;r&quot;</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">in</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;%s: %s: &quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+                <span class="n">perror</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+                <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">process_stream</span><span class="p">(</span><span class="n">in</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot; %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+            <span class="n">fclose</span><span class="p">(</span><span class="n">in</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+                <p class="m-3">
+                    <a class="btn btn-outline-dark" target="source" href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters/wc.c">Download <code>wc.c</code></a>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+</div><div class="tab-pane mt-2"
+     id="topic-filters-tab-command_line_examples" role="tabpanel" aria-labelledby="topic-filters-tab-command_line_examples-tab">
+
+
+
+
+
+This file contains examples of the use of the most common Unix
+filter programs (<code>egrep</code>, <code>wc</code>, <code>head</code>, etc.)
+It also contains solutions to the exercises discussed in lectures.
+
+<ol>
+
+<li>
+Consider a a file <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters/course_codes">course_codes</a>
+containing UNSW course codes and names.
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">ls -l course_codes</kbd>
+
+-rw-r--r-- 1 cs2041 cs2041 603446 May 30  2019 course_codes
+</pre>
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">wc course_codes</kbd>
+
+ 18181  79223 603446 course_codes
+</pre>
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">head course_codes</kbd>
+
+ACCT1501 Accounting &amp; Financial Mgt 1A
+ACCT1511 Accounting &amp; Financial Mgt 1B
+ACCT2101 Industry Placement 1
+ACCT2507 Intro  to Accounting Research
+ACCT2522 Management Accounting 1
+ACCT2532 Management Accounting (Hons)
+ACCT2542 Corporate Financial Reporting
+ACCT2552 Corporate Financial Rep (Hons)
+ACCT3202 Industry Placement 2
+ACCT3303 Industry Placement 3
+</pre>
+
+It looks like the code is separated from the title by a number of
+spaces. We can check this via <code>cat -A</code>:
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">head -5 course_codes | cat -A</kbd>
+
+ACCT1501 Accounting &amp; Financial Mgt 1A$
+ACCT1511 Accounting &amp; Financial Mgt 1B$
+ACCT2101 Industry Placement 1$
+ACCT2507 Intro  to Accounting Research$
+ACCT2522 Management Accounting 1$
+</pre>
+
+This shows us that our initial guess was wrong, and
+there's actually a tab character between the course code and title
+(shown as <code>^I</code> by <code>cat -A</code>).
+Also, the location of the end-of-line marker (<code>$</code>) indicates
+that there are no trailing spaces or tabs.
+<p>
+If we need to know what COMP courses there are:
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep -c COMP course_codes</kbd>
+
+191
+</pre>
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep COMP course_codes</kbd>
+
+COMP0011 Fundamentals of Computing
+COMP1000 Web, Spreadsheets &amp; Databases
+COMP1001 Introduction to Computing
+COMP1011 Computing 1A
+COMP1021 Computing 1B
+COMP1081 Harnessing the Power of IT
+COMP1091 Solving Problems with Software
+COMP1400 Programming for Designers
+COMP1711 Higher Computing 1A
+COMP1721 Higher Computing 1B
+COMP1911 Computing 1A
+COMP1917 Computing 1
+COMP1921 Computing 1B
+COMP1927 Computing 2
+COMP2011 Data Organisation
+COMP2021 Digital System Structures
+COMP2041 Software Construction
+COMP2091 Computing 2
+COMP2110 Software System Specification
+COMP2111 System Modelling and Design
+COMP2121 Microprocessors &amp; Interfacing
+COMP2411 Logic and Logic Programming
+COMP2711 Higher Data Organisation
+COMP2811 Computing B
+COMP2911 Eng. Design in Computing
+COMP2920 Professional Issues and Ethics
+COMP3111 Software Engineering
+COMP3120 Introduction to Algorithms
+COMP3121 Algorithms &amp; Programming Tech
+COMP3131 Programming Languages &amp; Compil
+COMP3141 Software Sys Des&amp;Implementat&#39;n
+COMP3151 Foundations of Concurrency
+COMP3152 Comparative Concurrency Semant
+COMP3153 Algorithmic Verification
+COMP3161 Concepts of Programming Lang.
+COMP3171 Object-Oriented Programming
+COMP3211 Computer Architecture
+COMP3221 Microprocessors &amp; Embedded Sys
+COMP3222 Digital Circuits and Systems
+COMP3231 Operating Systems
+COMP3241 Real Time Systems
+COMP3311 Database Systems
+COMP3331 Computer Networks&amp;Applications
+COMP3411 Artificial Intelligence
+COMP3421 Computer Graphics
+COMP3431 Robotic Software Architecture
+COMP3441 Security Engineering
+COMP3511 Human Computer Interaction
+COMP3601 Design Project A
+COMP3710 Software Project Management
+COMP3711 Software Project Management
+COMP3720 Total Quality Management
+COMP3821 Ext Algorithms&amp;Prog Techniques
+COMP3881 Ext Digital Circuits &amp; Systems
+COMP3891 Ext Operating Systems
+COMP3901 Special Project A
+COMP3902 Special Project B
+COMP3931 Ext Computer Networks &amp; App
+COMP4001 Object-Oriented Software Dev
+COMP4002 Logic Synthesis &amp; Verification
+COMP4003 Industrial Software Developmen
+COMP4011 Web Applications Engineering
+COMP4012 Occasional Elec S2 - Comp.Eng.
+COMP4121 Advanced &amp; Parallel Algorithms
+COMP4128 Programming Challenges
+COMP4131 Programming Language Semantics
+COMP4132 Adv. Functional Programming
+COMP4133 Advanced Compiler Construction
+COMP4141 Theory of Computation
+COMP4151 Algorithmic Verification
+COMP4161 Advanced Verification
+COMP4181 Language-based Software Safety
+COMP4211 Adv Architectures &amp; Algorithms
+COMP4314 Next Generation Database Systs
+COMP4317 XML and Databases
+COMP4335 Wireless Mesh&amp;Sensor Networks
+COMP4336 Mobile Data Networking
+COMP4337 Securing Wireless Networks
+COMP4411 Experimental Robotics
+COMP4412 Introduction to Modal Logic
+COMP4415 First-order Logic
+COMP4416 Intelligent Agents
+COMP4418 Knowledge Representation
+COMP4431 Game Design Workshop
+COMP4432 Game Design Studio
+COMP4442 Advanced Computer Security
+COMP4511 User Interface Design &amp; Constr
+COMP4601 Design Project B
+COMP4903 Industrial Training
+COMP4904 Industrial Training 1
+COMP4905 Industrial Training 2
+COMP4906 Industrial Training 3
+COMP4910 Thesis Part A
+COMP4911 Thesis Part B
+COMP4913 Computer Science 4 Honours P/T
+COMP4914 Computer Science 4 Honours F/T
+COMP4920 Management and Ethics
+COMP4930 Thesis Part A
+COMP4931 Thesis Part B
+COMP4941 Thesis Part B
+COMP6714 Info Retrieval and Web Search
+COMP6721 (In-)Formal Methods
+COMP6731 Combinatorial Data Processing
+COMP6733 Internet of Things
+COMP6741 Parameterized &amp; Exact Comp.
+COMP6752 Modelling Concurrent Systems
+COMP6771 Advanced C++ Programming
+COMP9000 Special Program
+COMP9001 E-Commerce Technologies
+COMP9008 Software Engineering
+COMP9009 Adv Topics in Software Eng
+COMP9015 Issues in Computing
+COMP9018 Advanced Graphics
+COMP9020 Foundations of Comp. Science
+COMP9021 Principles of Programming
+COMP9022 Digital Systems Structures
+COMP9024 Data Structures &amp; Algorithms
+COMP9031 Internet Programming
+COMP9032 Microprocessors &amp; Interfacing
+COMP9041 Software Construction
+COMP9081 Harnessing the Power of IT
+COMP9101 Design &amp;Analysis of Algorithms
+COMP9102 Programming Lang &amp; Compilers
+COMP9103 Algorithms &amp; Comp. Complexity
+COMP9104 Quantum ICT
+COMP9116 S&#39;ware Dev: B-Meth &amp; B-Toolkit
+COMP9117 Software Architecture
+COMP9151 Foundations of Concurrency
+COMP9152 Comparative Concurrency Semant
+COMP9153 Algorithmic Verification
+COMP9161 Concepts of Programming Lang.
+COMP9171 Object-Oriented Programming
+COMP9181 Language-based Software Safety
+COMP9201 Operating Systems
+COMP9211 Computer Architecture
+COMP9221 Microprocessors &amp; Embedded Sys
+COMP9222 Digital Circuits and Systems
+COMP9231 Integrated Digital Systems
+COMP9242 Advanced Operating Systems
+COMP9243 Distributed Systems
+COMP9244 Software View of Proc Architec
+COMP9245 Real-Time Systems
+COMP9282 Ext Micros &amp; Interfacing
+COMP9283 Ext Operating Systems
+COMP9311 Database Systems
+COMP9313 Big Data Management
+COMP9314 Next Generation Database Systs
+COMP9315 Database Systems Implementat&#39;n
+COMP9316 eCommerce Implementation
+COMP9317 XML and Databases
+COMP9318 Data Warehousing &amp; Data Mining
+COMP9319 Web Data Compression &amp; Search
+COMP9321 Web Applications Engineering
+COMP9322 Service-Oriented Architectures
+COMP9323 e-Enterprise Project
+COMP9331 Computer Networks&amp;Applications
+COMP9332 Network Routing and Switching
+COMP9333 Advanced Computer Networks
+COMP9334 Systems Capacity Planning
+COMP9335 Wireless Mesh&amp;Sensor Networks
+COMP9336 Mobile Data Networking
+COMP9337 Securing Wireless Networks
+COMP9414 Artificial Intelligence
+COMP9415 Computer Graphics
+COMP9416 Knowledge Based Systems
+COMP9417 Machine Learning &amp; Data Mining
+COMP9418 Advanced Machine Learning
+COMP9431 Robotic Software Architecture
+COMP9441 Security Engineering
+COMP9444 Neural Networks
+COMP9447 Security Engineering Workshop
+COMP9511 Human Computer Interaction
+COMP9514 Advanced Decision Theory
+COMP9515 Pattern Classification
+COMP9517 Computer Vision
+COMP9518 Pattern Recognition
+COMP9519 Multimedia Systems
+COMP9520 Ext Foundations of Computer Sc
+COMP9596 Research Project
+COMP9790 Principles of GNSS Positioning
+COMP9791 Modern Navigation &amp;Positioning
+COMP9801 Ext Design&amp;Analysis of Algo
+COMP9814 Ext Artificial Intelligence
+COMP9833 Ext Computer Networks &amp; Appl
+COMP9844 Ext Neural Networks
+COMP9901 P/T Res. Thesis Comp Sci &amp; Eng
+COMP9902 Res. Thesis Comp Sci &amp; Eng F/T
+COMP9910 Mgt&amp;Com Skills-CompSci&amp;Eng Res
+COMP9912 Project (24 UOC)
+COMP9930 Readings in Comp Sci and Eng
+COMP9945 Research Project
+</pre>
+
+Either of the two commands below tell us which courses
+have "comp" in their name or code (in upper or lower case).
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">tr A-Z a-z &lt;course_codes | egrep comp</kbd>
+
+aciv2518 eng computational methods 1
+acsc1600 computer science 1
+acsc1800 computer science 1e
+acsc2015 interactive computer graphics
+acsc2020 computer science core b2
+acsc2021 computer systems architectrue 2
+acsc2107 computer languages b
+acsc2601 computer science 2a
+acsc2602 computer science 2b
+acsc2802 computer science 2ee
+acsc3003 computer project
+acsc3029 computing project 3
+acsc3030 cryptography &amp; computer securi
+acsc3601 computer science 3a
+acsc3603 computer science 3c
+acsc4191 computer science 4 (hons) f/t
+acsc7304 computer graphics
+acsc7306 computer speech processing
+acsc7336 computer security
+acsc8248 computer graphics (12 cpt)
+acsc9000 computer science research f/t
+acsc9001 computer science research p/t
+aele2007 computer design
+aele2508 microcomputer interfacing
+aele3031 microcomputer interfacing
+aele4511 computer control theory
+amat3107 complex variables
+amat3401 complex analysis 3e
+amat3503 complex variables e
+amec3512 pumps, turbines &amp; compressors
+ance8001 computational mathematics
+ance8002 supercomputing techniques
+ance9105 comp techniques fluid dynamics
+aphy3028 computational physics
+arch1391 digital computation studio
+arch5202 computer applications 2
+arch5203 computer applications 3
+arch5205 theory of architectural computin
+arch5220 computer graphics programming 1
+arch5221 computer graphics programming 2
+arch5223 computer applications 2
+arch5940 theory of architectural computin
+arch5942 arctitectural computing seminar
+arch5943 theory of architectural computin
+arch6201 architectural computing 1
+arch6205 architectural computing 2
+arch6214 architectural computing 2
+arch7204 design computing theory
+arch7205 computer graphics programming
+arts2301 computers, brains &amp; minds
+atax0002 computer information systems
+atax0053 acct for complex struct &amp; inst
+atax0324 gst: complex issues &amp; planning
+atax0341 comparative tax systems
+atax0424 gst: complex issues &amp; planning
+atax0441 comparative tax systems
+atax0524 gst: complex issues &amp; planning
+atax0641 comparative tax systems
+aust2003 aborig. studies: a global compar
+aven1500 computing for aviation
+beil0003 be annual design competition
+beil0004 design competitions and bids
+benv1141 computers and information tech
+benv1242 computer-aided design
+benv2405 computer graphics programming
+binf3020 computational bioinformatics
+binf9020 computational bioinformatics
+biom5912 comp thesis b&amp;c
+biom5920 thesis part a (comp)
+biom5921 thesis part b (comp)
+biom9332 biocompatibility
+biom9501 computing for biomedical eng
+biom9601 biomed applic.of microcomp 1
+biom9602 biomed applic.of microcomp 2
+bios3021 comparative animal physiology
+bldg2281 introduction to computing
+bldg3282 computer apps in building
+bldg3482 computer aplications in constr
+ceic5310 computing studies in the process
+ceic8310 computing studies proc ind
+ceic8335 adv computer methods
+chem3031 inorg chem:trans metals &amp; comp
+chem3640 computers in chemistry
+civl1015 computing
+civl1106 computing &amp; graphics
+civl3015 engineering computations
+civl3106 engineering computations
+cmed9517 adv biostatistic &amp; stat comp
+code1110 computational design theory 1
+code1210 computational design theory 2
+code2110 computational design theory 3
+code2120 computational sustainability
+code2121 advanced computational design
+cofa2682 multi-media computing unit 3
+cofa3681 multi-media computing elective 1
+cofa5116 design &amp; computers
+cofa5130 typography &amp; composition
+cofa5216 design &amp; computers 1
+cofa5240 design &amp; computers 2 cad
+cofa5241 design &amp; computers 2 graphics
+cofa5338 design &amp; computers 3 - cad
+cofa5339 design &amp; computers 3 - graphic
+cofa8670 intro to multi-media computing
+comd2040 of tigers &amp; pussycats: a compa
+comp0011 fundamentals of computing
+comp1000 web, spreadsheets &amp; databases
+comp1001 introduction to computing
+comp1011 computing 1a
+comp1021 computing 1b
+comp1081 harnessing the power of it
+comp1091 solving problems with software
+comp1400 programming for designers
+comp1711 higher computing 1a
+comp1721 higher computing 1b
+comp1911 computing 1a
+comp1917 computing 1
+comp1921 computing 1b
+comp1927 computing 2
+comp2011 data organisation
+comp2021 digital system structures
+comp2041 software construction
+comp2091 computing 2
+comp2110 software system specification
+comp2111 system modelling and design
+comp2121 microprocessors &amp; interfacing
+comp2411 logic and logic programming
+comp2711 higher data organisation
+comp2811 computing b
+comp2911 eng. design in computing
+comp2920 professional issues and ethics
+comp3111 software engineering
+comp3120 introduction to algorithms
+comp3121 algorithms &amp; programming tech
+comp3131 programming languages &amp; compil
+comp3141 software sys des&amp;implementat&#39;n
+comp3151 foundations of concurrency
+comp3152 comparative concurrency semant
+comp3153 algorithmic verification
+comp3161 concepts of programming lang.
+comp3171 object-oriented programming
+comp3211 computer architecture
+comp3221 microprocessors &amp; embedded sys
+comp3222 digital circuits and systems
+comp3231 operating systems
+comp3241 real time systems
+comp3311 database systems
+comp3331 computer networks&amp;applications
+comp3411 artificial intelligence
+comp3421 computer graphics
+comp3431 robotic software architecture
+comp3441 security engineering
+comp3511 human computer interaction
+comp3601 design project a
+comp3710 software project management
+comp3711 software project management
+comp3720 total quality management
+comp3821 ext algorithms&amp;prog techniques
+comp3881 ext digital circuits &amp; systems
+comp3891 ext operating systems
+comp3901 special project a
+comp3902 special project b
+comp3931 ext computer networks &amp; app
+comp4001 object-oriented software dev
+comp4002 logic synthesis &amp; verification
+comp4003 industrial software developmen
+comp4011 web applications engineering
+comp4012 occasional elec s2 - comp.eng.
+comp4121 advanced &amp; parallel algorithms
+comp4128 programming challenges
+comp4131 programming language semantics
+comp4132 adv. functional programming
+comp4133 advanced compiler construction
+comp4141 theory of computation
+comp4151 algorithmic verification
+comp4161 advanced verification
+comp4181 language-based software safety
+comp4211 adv architectures &amp; algorithms
+comp4314 next generation database systs
+comp4317 xml and databases
+comp4335 wireless mesh&amp;sensor networks
+comp4336 mobile data networking
+comp4337 securing wireless networks
+comp4411 experimental robotics
+comp4412 introduction to modal logic
+comp4415 first-order logic
+comp4416 intelligent agents
+comp4418 knowledge representation
+comp4431 game design workshop
+comp4432 game design studio
+comp4442 advanced computer security
+comp4511 user interface design &amp; constr
+comp4601 design project b
+comp4903 industrial training
+comp4904 industrial training 1
+comp4905 industrial training 2
+comp4906 industrial training 3
+comp4910 thesis part a
+comp4911 thesis part b
+comp4913 computer science 4 honours p/t
+comp4914 computer science 4 honours f/t
+comp4920 management and ethics
+comp4930 thesis part a
+comp4931 thesis part b
+comp4941 thesis part b
+comp6714 info retrieval and web search
+comp6721 (in-)formal methods
+comp6731 combinatorial data processing
+comp6733 internet of things
+comp6741 parameterized &amp; exact comp.
+comp6752 modelling concurrent systems
+comp6771 advanced c++ programming
+comp9000 special program
+comp9001 e-commerce technologies
+comp9008 software engineering
+comp9009 adv topics in software eng
+comp9015 issues in computing
+comp9018 advanced graphics
+comp9020 foundations of comp. science
+comp9021 principles of programming
+comp9022 digital systems structures
+comp9024 data structures &amp; algorithms
+comp9031 internet programming
+comp9032 microprocessors &amp; interfacing
+comp9041 software construction
+comp9081 harnessing the power of it
+comp9101 design &amp;analysis of algorithms
+comp9102 programming lang &amp; compilers
+comp9103 algorithms &amp; comp. complexity
+comp9104 quantum ict
+comp9116 s&#39;ware dev: b-meth &amp; b-toolkit
+comp9117 software architecture
+comp9151 foundations of concurrency
+comp9152 comparative concurrency semant
+comp9153 algorithmic verification
+comp9161 concepts of programming lang.
+comp9171 object-oriented programming
+comp9181 language-based software safety
+comp9201 operating systems
+comp9211 computer architecture
+comp9221 microprocessors &amp; embedded sys
+comp9222 digital circuits and systems
+comp9231 integrated digital systems
+comp9242 advanced operating systems
+comp9243 distributed systems
+comp9244 software view of proc architec
+comp9245 real-time systems
+comp9282 ext micros &amp; interfacing
+comp9283 ext operating systems
+comp9311 database systems
+comp9313 big data management
+comp9314 next generation database systs
+comp9315 database systems implementat&#39;n
+comp9316 ecommerce implementation
+comp9317 xml and databases
+comp9318 data warehousing &amp; data mining
+comp9319 web data compression &amp; search
+comp9321 web applications engineering
+comp9322 service-oriented architectures
+comp9323 e-enterprise project
+comp9331 computer networks&amp;applications
+comp9332 network routing and switching
+comp9333 advanced computer networks
+comp9334 systems capacity planning
+comp9335 wireless mesh&amp;sensor networks
+comp9336 mobile data networking
+comp9337 securing wireless networks
+comp9414 artificial intelligence
+comp9415 computer graphics
+comp9416 knowledge based systems
+comp9417 machine learning &amp; data mining
+comp9418 advanced machine learning
+comp9431 robotic software architecture
+comp9441 security engineering
+comp9444 neural networks
+comp9447 security engineering workshop
+comp9511 human computer interaction
+comp9514 advanced decision theory
+comp9515 pattern classification
+comp9517 computer vision
+comp9518 pattern recognition
+comp9519 multimedia systems
+comp9520 ext foundations of computer sc
+comp9596 research project
+comp9790 principles of gnss positioning
+comp9791 modern navigation &amp;positioning
+comp9801 ext design&amp;analysis of algo
+comp9814 ext artificial intelligence
+comp9833 ext computer networks &amp; appl
+comp9844 ext neural networks
+comp9901 p/t res. thesis comp sci &amp; eng
+comp9902 res. thesis comp sci &amp; eng f/t
+comp9910 mgt&amp;com skills-compsci&amp;eng res
+comp9912 project (24 uoc)
+comp9930 readings in comp sci and eng
+comp9945 research project
+crim3010 comparative criminal justice
+cven1015 computing
+cven1025 computing
+cven2002 engineering computations
+cven2025 engineering computations 1
+cven2702 engineering computations
+cven3025 engineering computations 2
+cven4307 steel &amp; composite structures
+cven8827 composite steel-concrete struc
+cven9820 computational struct mechanics
+cven9822 steel &amp; composite structures
+cven9827 composite steel-concrete struc
+danc2000 dance analysis &amp; composition 1
+danc2005 dance analysis &amp; composition 2
+danc2015 dance analysis &amp; composition 3
+econ3213 comparative forecasting techs
+econ5122 compet. in the know. econ.
+econ5255 computational stats &amp; econ mod
+edst1492 computer skills for teachers
+edst4092 computer skills for teachers
+edst4157 computing studies method 1
+edst4158 computing studies method 2
+elec4343 source coding &amp; compression
+elec4432 computer control &amp; instrumenta
+elec4632 computer control systems
+elec9401 computer control systems 1
+elec9402 computer control systems 2
+elec9403 real time computing &amp; control
+elec9733 real computing and control
+engg1811 computing for engineers
+euro2302 the messiah complex
+fins5553 insur. comp. oper. &amp; manage.
+fndn0301 computing studies
+fndn0302 computing studies and research
+fndn0311 computing studies - t
+food4220 computer applications
+food4320 computer applications
+food4537 computing in food science
+food9101 complex fluid micro &amp; rheology
+gbat9131 leadership in a complex enviro
+gend1212 analysing a picture:comp.&amp;des.
+gend4201 design and computing
+gene8001 computer game design
+genm0515 computers for professionals
+genp0515 computers for professionals
+gens2001 the computer
+gens5525 the comp: its impact, sign&#39;fcnce
+gent0407 tv soaps: a comparative study
+gent0603 the computer: impact, significan
+gent0802 the complexity of everyday life
+gent1003 computers into the 21st c
+geog3161 computer mapping &amp; data displa
+geog3861 computer mapping
+geog9014 computer mapping &amp;data display
+geog9210 computer mapping &amp; data displa
+geol0300 computing &amp; stats for geol
+geol2041 geological computing
+gmat1111 introduction to computing
+gmat1150 survey methods&amp; computations
+gmat1300 comp appl in geomatics
+gmat2111 principles of computer processin
+gmat2112 principles of computer processin
+gmat2122 computer graphics 1
+gmat2131 survey computations
+gmat2350 comp for spatial info sciences
+gmat2500 surveying computations a
+gmat2550 surveying computations b
+gmat3111 survey computations
+gmat3122 computer graphics 1
+gmat3231 geodetic computations
+gmat4111 data analysis &amp; computing 1
+gmat4112 data analysis &amp; computing 1
+gmat5111 data analysis &amp; computing 2
+gmat5112 data analysis &amp; computing 2
+gmat5122 computer graphics 2
+heal9471 comparative h&#39;lth care systems
+heal9501 comp tech for health serv mngt
+hist2487 the messiah complex
+hpsc2610 computers, brains &amp; minds
+hpst2004 computers, brains &amp; minds
+hpst2109 computers, brains &amp; minds
+ides2121 introduction to computing
+ides3101 design studio 5: complexity
+ides3231 adv computer aided product des
+ides5153 computer graphic applications
+ides5154 computer aided design
+iest5009 competencies in sustainability
+iest5010 competencies in sustainability
+ilas0232 computer prog&#39;mng for info. appl
+ilas0233 computing applications in the in
+infs3607 distributed computer systems
+irob5732 spec topic- internat &amp; comp ir
+irob5734 adv seminar-internat &amp; comp ir
+jurd7348 harry gibbs moot comp 6uoc
+jurd7419 competition law and policy
+jurd7473 asian competition law
+jurd7474 competition law and ip
+jurd7489 complex civil litigation
+jurd7522 competition law
+jurd7559 int&#39;l&amp;comparative law w&#39;shop
+jurd7610 mediation competition
+jurd7616 international &amp; comparative ip
+jurd7648 transitional justice intl comp
+jurd7989 comparative anti-terrorism law
+jwst2104 the messiah complex
+land1131 introduction to computer applica
+laws1032 computer applications to law
+laws2065 comparative law
+laws2085 comparative law
+laws2110 comparative constitutional law
+laws2148 harry gibbs moot comp 8uoc
+laws2410 mediation competition
+laws2589 complex civil litigation
+laws3009 comparative criminal justice:
+laws3022 competition law
+laws3035 developing comp apps to law
+laws3051 telecomm. competition &amp; cons.
+laws3148 harry gibbs moot comp
+laws3159 int&#39;l&amp;comparative law w&#39;shop
+laws3348 transitional justice intl comp
+laws3510 mediation competition
+laws3589 complex civil litigation
+laws4016 international &amp; comparative ip
+laws4019 competition law
+laws4089 comparative anti-terrorism law
+laws4120 themes in asian &amp; compar. law
+laws4133 issues in asian &amp; comp law
+laws4291 comparative constitutional law
+laws4620 computer applications to law
+laws4765 complex commercial litigation
+laws5234 competition law and regulation
+laws7003 global issues in comp policy
+laws8016 international &amp; comparative ip
+laws8073 asian competition law
+laws8074 competition law and ip
+laws8118 legal systems in comp persp
+laws8143 comparative patent law
+laws8144 comparative trade mark law
+laws8219 competition law and policy
+laws8289 comparative anti-terrorism law
+laws8348 transitional justice intl comp
+laws8765 complex commercial litigation
+laws9973 comparative law
+laws9984 int. &amp; comp. indigenous law
+legt5531 comp. bus. &amp; legal strategies
+legt5602 tax admin. &amp; compliance
+libs0233 computer applications in the inf
+manf3500 computers in manufacturing 1
+manf4500 computers in manufacturing 2
+manf4601 comp aided production mgmt a
+manf4602 comp aided production mgmt b
+manf8560 computer integrated manufact.
+manf9500 computer-aided progrmg for numcl
+manf9543 comp aided design/manufacture
+manf9560 computer integrated manufact.
+mark3022 computer applications in marketi
+math1061 introductory applied computing
+math2301 mathematical computing
+math2430 symbolic computing
+math2520 complex analysis
+math2521 complex analysis
+math2620 higher complex analysis
+math2621 higher complex analysis
+math2810 statistical computing
+math2910 higher statistical computing
+math3101 computational mathematics
+math3301 advanced math computing
+math3311 math computing for finance
+math3400 logic &amp; computability
+math3421 logic and computability
+math3430 symbolic computing
+math3680 higher complex analysis
+math3790 higher computat. combinatorics
+math3800 statistical computation 1
+math3810 statistical computation 2
+math3821 stat modelling &amp; computing
+math3871 bayesian inference and comp
+math4003 maths and comp sci honours f/t
+math4004 maths and comp sci honours p/t
+math5009 comp&#39;l coursework thesis ft
+math5010 comp&#39;l coursework thesis pt
+math5305 computational mathematics
+math5315 high perf numerical computing
+math5335 comput&#39;l methods for finance
+math5400 logic &amp; computability
+math5505 computational combinatorics
+math5685 complex analysis
+math5856 intro to stats and stat comput
+math5960 bayesian inference &amp; comput&#39;n
+math9315 topics in mathematical computing
+mats1021 computing in materials science
+mats1264 fibre reinforced plastic composi
+mats3064 composite materials
+mats4005 composites and functional mats
+mats5342 comp modelling &amp; design
+mats6110 computational materials
+mbax9131 leadership in a complex enviro
+mech1500 computing 1m
+mech3500 computing 2m
+mech3510 computing applications in mech.
+mech3530 computing applcts in mechanical
+mech3540 computational engineering
+mech4130 computer-aided engineering desig
+mech4150 design &amp; maintenance of componen
+mech4500 computing 3m
+mech4620 computational fluid dynamics
+mech8620 computational fluid dynamics
+mech9150 design &amp; maintenance of componen
+mech9420 composite materials and mechan
+mech9620 computational fluid dynamics
+meft5103 computer media
+mgmt2106 comparative management systems
+mgmt5050 teams, ethics &amp; comp adv
+mgmt5802 comp. adv. through people
+mine0710 computing 1
+mine1720 microcomputers (mining)
+mine1730 computer applications in mining
+mine4082 computational methods
+mine4810 comp methods in geomechanics
+mtrn2500 comp for mtrn
+mtrn3500 comp appl in mechatonic sys
+mtrn3530 computing applcts in mech.sys.
+pfst2000 dance analysis &amp; composition 1
+pfst2005 dance analysis &amp; composition 2
+pfst2011 performance composition
+phar9121 postmarketing compliance meds
+phcm9471 comparative h&#39;lth care systems
+phil5206 ai &amp; computer science
+phil5207 ai &amp; computer science 2a
+phys1601 comp. applic&#39;ns in exp. sci. 1
+phys2001 mechanics &amp; computational phys
+phys2020 computational physics
+phys2120 mechanics and computational
+phys2601 computer applications 2
+phys3601 computer applications in instrum
+phys3610 computational physics
+phys3620 computer based signal processing
+plan1061 computer literacy
+pols2016 concepts in comparative pol cult
+pols3953 comparative politics: russia
+psyc3191 computer science &amp; psychology
+ptrl1013 computing-petroleum engineers
+ptrl4013 well completion &amp; stimulation
+ptrl5016 well completions &amp; stimulation
+ptrl6016 well completions &amp; stimulation
+regs0044 comp law in global context
+regs0115 compliance: financial service
+regs0218 compliance: financial services
+regs0428 computer applications in linguis
+regs0453 multiple regress. &amp; stat comp
+regs0474 comparative international tax
+regs0633 comparative corp &amp; comm law
+regs0638 international comparative corp
+regs0718 energy co-compliance in bldgs
+regs3092 comp cntrl of machines &amp; proc
+regs3265 intl and comparative ind. rel.
+regs3410 computer networks
+regs3873 introduction to computer graphic
+regs3909 trade marks &amp; unfair comp
+regs3948 competition law
+regs4045 competition reg. of mergers
+regs5618 comp integrated manufacturing
+regs7726 composites &amp; multiphase polyme
+regs7908 service managing for comp.adv.
+sart1608 digital composite 1
+sart1681 multimedia computing elective1
+sart1810 introduction to computing
+sart2608 digital composite 2
+sart2681 multimedia computing elective2
+sart2811 multimedia computing workshop
+sart2835 composition and design
+sart3608 digital composite 3
+sart3681 multimedia computing elective3
+sart3840 advanced multimedia computing
+sart9725 intro to multimedia computing
+sart9739 multimedia computing elective
+sart9741 composition and design
+sdes1106 design and computers 1
+sdes1110 design and computers 2
+sdes1111 integrated design computing 1
+sdes1211 integrated design computing 2
+sdes1601 colour,composition &amp;typography
+sdes2107 design and computers 3
+sdes2115 design and computers 2b
+sdes3107 design and computers 4
+sdes3173 advanced computer graphics
+sdes4103 design and computers 4
+sdes6714 intro 3d computer aided design
+slsp2902 computers and comm.
+soca3314 the messiah complex
+soci3401 computer analysis of social data
+soci3408 computer analysis of social data
+soma1608 digital composite
+soma1681 intro multimedia computing
+soma1810 introduction to computing
+soma2402 tangible computing
+soma2608 digital composite 2
+soma2681 advanced multimedia computing
+soma2811 multimedia computing workshop
+soma3415 compositional project
+soma3608 digital composite 3
+surv1111 introduction to computing
+surv2111 principles of computer processin
+surv2122 computer graphics 1
+surv3111 survey computations
+surv3231 geodetic computations
+surv4111 data analysis &amp; computing 1
+surv5111 data analysis &amp; computing 2
+surv5122 computer graphics 2
+surv6121 computer graphics
+tabl1002 computer information systems
+tabl2053 acct for complex struct &amp; inst
+tabl3044 comparative tax systems
+tabl5544 comparative tax systems
+tedg1101 computers in education
+tedg1106 computer-based resources: design
+tedg1107 managing with computers in schoo
+tedg1112 computers - gifted &amp; talented st
+tedg1113 computer control technology in e
+teed1134 fundamentals of computing
+teed2119 computers &amp; people
+tele4343 source coding and compression
+tele9302 computer networks
+text2501 computing applications
+zacm3011 component design
+zacm3433 compressible flow
+zacm4020 computational structures
+zacm4031 compressible flow
+zacm4913 eng app of comp fluid dynamics
+zbus2200 markets and competition
+zeit1101 computational problem solving
+zeit1110 computer games
+zeit2102 computer technology
+zeit2305 computer games
+zeit3113 computer languages &amp; algorithm
+zeit3304 computing proj - info sys
+zeit3307 computer games
+zeit4003 computational fluid dynamics
+zeit7101 computational problem solving
+zeit8020 computer network operations
+zeit8028 computer forensics
+zeit9100 computer science research f/t
+zeit9101 computer science research p/t
+zgen2300 computers in society
+zgen2301 computer games
+zhss8431 comparative defence planning
+zint1001 eng comp methods 1
+zite1001 computer tools for engineers
+zite1101 intro to computer science
+zite2101 computer languages &amp; algorithm
+zite2102 computer technology
+zite3101 computing proj - comp sci
+zite3105 human computer interaction
+zite3106 interactive computer graphics
+zite3113 computer languages &amp; algorithm
+zite3211 microcomputer interfacing
+zite3304 computing proj - info sys
+zite4101 computer sci 4 (comb hons) f/t
+zite4102 computer sci 4 (comb hon) p/t
+zite4103 computer science 4 (hons) f/t
+zite4104 computer science 4 (hons) p/t
+zite8103 computer graphics
+zite8104 computer security
+zite8105 computer speech processing
+zite8145 softcomp
+zite9100 computer science research f/t
+zite9101 computer science research p/t
+zpem3302 complex variables
+</pre>
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep -i comp course_codes</kbd>
+
+ACIV2518 Eng Computational Methods 1
+ACSC1600 Computer Science 1
+ACSC1800 Computer Science 1E
+ACSC2015 Interactive Computer Graphics
+ACSC2020 Computer Science Core B2
+ACSC2021 Computer Systems Architectrue 2
+ACSC2107 Computer Languages B
+ACSC2601 Computer Science 2A
+ACSC2602 Computer Science 2B
+ACSC2802 Computer Science 2EE
+ACSC3003 Computer Project
+ACSC3029 Computing Project 3
+ACSC3030 Cryptography &amp; Computer Securi
+ACSC3601 Computer Science 3A
+ACSC3603 Computer Science 3C
+ACSC4191 Computer Science 4 (Hons) F/T
+ACSC7304 Computer Graphics
+ACSC7306 Computer Speech Processing
+ACSC7336 Computer Security
+ACSC8248 Computer Graphics (12 Cpt)
+ACSC9000 Computer Science Research F/T
+ACSC9001 Computer Science Research P/T
+AELE2007 Computer Design
+AELE2508 Microcomputer Interfacing
+AELE3031 Microcomputer Interfacing
+AELE4511 Computer Control Theory
+AMAT3107 Complex Variables
+AMAT3401 Complex Analysis 3E
+AMAT3503 Complex Variables E
+AMEC3512 Pumps, Turbines &amp; Compressors
+ANCE8001 Computational Mathematics
+ANCE8002 Supercomputing Techniques
+ANCE9105 Comp Techniques Fluid Dynamics
+APHY3028 Computational Physics
+ARCH1391 Digital Computation Studio
+ARCH5202 Computer Applications 2
+ARCH5203 Computer Applications 3
+ARCH5205 Theory of Architectural Computin
+ARCH5220 Computer Graphics Programming 1
+ARCH5221 Computer Graphics Programming 2
+ARCH5223 Computer Applications 2
+ARCH5940 Theory of Architectural Computin
+ARCH5942 Arctitectural Computing Seminar
+ARCH5943 Theory of Architectural Computin
+ARCH6201 Architectural Computing 1
+ARCH6205 Architectural Computing 2
+ARCH6214 Architectural Computing 2
+ARCH7204 Design Computing Theory
+ARCH7205 Computer Graphics Programming
+ARTS2301 Computers, Brains &amp; Minds
+ATAX0002 Computer Information Systems
+ATAX0053 Acct for Complex Struct &amp; Inst
+ATAX0324 GST: Complex Issues &amp; Planning
+ATAX0341 Comparative Tax Systems
+ATAX0424 GST: Complex Issues &amp; Planning
+ATAX0441 Comparative Tax Systems
+ATAX0524 GST: Complex Issues &amp; Planning
+ATAX0641 Comparative Tax Systems
+AUST2003 Aborig. Studies: a Global Compar
+AVEN1500 Computing for Aviation
+BEIL0003 BE Annual Design Competition
+BEIL0004 Design Competitions and Bids
+BENV1141 Computers and Information Tech
+BENV1242 Computer-Aided Design
+BENV2405 Computer Graphics Programming
+BINF3020 Computational Bioinformatics
+BINF9020 Computational Bioinformatics
+BIOM5912 Comp Thesis B&amp;C
+BIOM5920 Thesis Part A (Comp)
+BIOM5921 Thesis Part B (Comp)
+BIOM9332 Biocompatibility
+BIOM9501 Computing for Biomedical Eng
+BIOM9601 Biomed Applic.of Microcomp 1
+BIOM9602 Biomed Applic.of Microcomp 2
+BIOS3021 Comparative Animal Physiology
+BLDG2281 Introduction To Computing
+BLDG3282 Computer Apps in Building
+BLDG3482 Computer Aplications in Constr
+CEIC5310 Computing Studies in The Process
+CEIC8310 Computing Studies Proc Ind
+CEIC8335 Adv Computer Methods
+CHEM3031 Inorg Chem:Trans Metals &amp; Comp
+CHEM3640 Computers in Chemistry
+CIVL1015 Computing
+CIVL1106 Computing &amp; Graphics
+CIVL3015 Engineering Computations
+CIVL3106 Engineering Computations
+CMED9517 Adv Biostatistic &amp; Stat Comp
+CODE1110 Computational Design Theory 1
+CODE1210 Computational Design Theory 2
+CODE2110 Computational Design Theory 3
+CODE2120 Computational Sustainability
+CODE2121 Advanced Computational Design
+COFA2682 Multi-media Computing Unit 3
+COFA3681 Multi-media Computing Elective 1
+COFA5116 Design &amp; Computers
+COFA5130 Typography &amp; Composition
+COFA5216 Design &amp; Computers 1
+COFA5240 Design &amp; Computers 2 Cad
+COFA5241 Design &amp; Computers 2 Graphics
+COFA5338 Design &amp; Computers 3 - Cad
+COFA5339 Design &amp; Computers 3 - Graphic
+COFA8670 Intro To Multi-media Computing
+COMD2040 Of Tigers &amp; Pussycats: a Compa
+COMP0011 Fundamentals of Computing
+COMP1000 Web, Spreadsheets &amp; Databases
+COMP1001 Introduction to Computing
+COMP1011 Computing 1A
+COMP1021 Computing 1B
+COMP1081 Harnessing the Power of IT
+COMP1091 Solving Problems with Software
+COMP1400 Programming for Designers
+COMP1711 Higher Computing 1A
+COMP1721 Higher Computing 1B
+COMP1911 Computing 1A
+COMP1917 Computing 1
+COMP1921 Computing 1B
+COMP1927 Computing 2
+COMP2011 Data Organisation
+COMP2021 Digital System Structures
+COMP2041 Software Construction
+COMP2091 Computing 2
+COMP2110 Software System Specification
+COMP2111 System Modelling and Design
+COMP2121 Microprocessors &amp; Interfacing
+COMP2411 Logic and Logic Programming
+COMP2711 Higher Data Organisation
+COMP2811 Computing B
+COMP2911 Eng. Design in Computing
+COMP2920 Professional Issues and Ethics
+COMP3111 Software Engineering
+COMP3120 Introduction to Algorithms
+COMP3121 Algorithms &amp; Programming Tech
+COMP3131 Programming Languages &amp; Compil
+COMP3141 Software Sys Des&amp;Implementat&#39;n
+COMP3151 Foundations of Concurrency
+COMP3152 Comparative Concurrency Semant
+COMP3153 Algorithmic Verification
+COMP3161 Concepts of Programming Lang.
+COMP3171 Object-Oriented Programming
+COMP3211 Computer Architecture
+COMP3221 Microprocessors &amp; Embedded Sys
+COMP3222 Digital Circuits and Systems
+COMP3231 Operating Systems
+COMP3241 Real Time Systems
+COMP3311 Database Systems
+COMP3331 Computer Networks&amp;Applications
+COMP3411 Artificial Intelligence
+COMP3421 Computer Graphics
+COMP3431 Robotic Software Architecture
+COMP3441 Security Engineering
+COMP3511 Human Computer Interaction
+COMP3601 Design Project A
+COMP3710 Software Project Management
+COMP3711 Software Project Management
+COMP3720 Total Quality Management
+COMP3821 Ext Algorithms&amp;Prog Techniques
+COMP3881 Ext Digital Circuits &amp; Systems
+COMP3891 Ext Operating Systems
+COMP3901 Special Project A
+COMP3902 Special Project B
+COMP3931 Ext Computer Networks &amp; App
+COMP4001 Object-Oriented Software Dev
+COMP4002 Logic Synthesis &amp; Verification
+COMP4003 Industrial Software Developmen
+COMP4011 Web Applications Engineering
+COMP4012 Occasional Elec S2 - Comp.Eng.
+COMP4121 Advanced &amp; Parallel Algorithms
+COMP4128 Programming Challenges
+COMP4131 Programming Language Semantics
+COMP4132 Adv. Functional Programming
+COMP4133 Advanced Compiler Construction
+COMP4141 Theory of Computation
+COMP4151 Algorithmic Verification
+COMP4161 Advanced Verification
+COMP4181 Language-based Software Safety
+COMP4211 Adv Architectures &amp; Algorithms
+COMP4314 Next Generation Database Systs
+COMP4317 XML and Databases
+COMP4335 Wireless Mesh&amp;Sensor Networks
+COMP4336 Mobile Data Networking
+COMP4337 Securing Wireless Networks
+COMP4411 Experimental Robotics
+COMP4412 Introduction to Modal Logic
+COMP4415 First-order Logic
+COMP4416 Intelligent Agents
+COMP4418 Knowledge Representation
+COMP4431 Game Design Workshop
+COMP4432 Game Design Studio
+COMP4442 Advanced Computer Security
+COMP4511 User Interface Design &amp; Constr
+COMP4601 Design Project B
+COMP4903 Industrial Training
+COMP4904 Industrial Training 1
+COMP4905 Industrial Training 2
+COMP4906 Industrial Training 3
+COMP4910 Thesis Part A
+COMP4911 Thesis Part B
+COMP4913 Computer Science 4 Honours P/T
+COMP4914 Computer Science 4 Honours F/T
+COMP4920 Management and Ethics
+COMP4930 Thesis Part A
+COMP4931 Thesis Part B
+COMP4941 Thesis Part B
+COMP6714 Info Retrieval and Web Search
+COMP6721 (In-)Formal Methods
+COMP6731 Combinatorial Data Processing
+COMP6733 Internet of Things
+COMP6741 Parameterized &amp; Exact Comp.
+COMP6752 Modelling Concurrent Systems
+COMP6771 Advanced C++ Programming
+COMP9000 Special Program
+COMP9001 E-Commerce Technologies
+COMP9008 Software Engineering
+COMP9009 Adv Topics in Software Eng
+COMP9015 Issues in Computing
+COMP9018 Advanced Graphics
+COMP9020 Foundations of Comp. Science
+COMP9021 Principles of Programming
+COMP9022 Digital Systems Structures
+COMP9024 Data Structures &amp; Algorithms
+COMP9031 Internet Programming
+COMP9032 Microprocessors &amp; Interfacing
+COMP9041 Software Construction
+COMP9081 Harnessing the Power of IT
+COMP9101 Design &amp;Analysis of Algorithms
+COMP9102 Programming Lang &amp; Compilers
+COMP9103 Algorithms &amp; Comp. Complexity
+COMP9104 Quantum ICT
+COMP9116 S&#39;ware Dev: B-Meth &amp; B-Toolkit
+COMP9117 Software Architecture
+COMP9151 Foundations of Concurrency
+COMP9152 Comparative Concurrency Semant
+COMP9153 Algorithmic Verification
+COMP9161 Concepts of Programming Lang.
+COMP9171 Object-Oriented Programming
+COMP9181 Language-based Software Safety
+COMP9201 Operating Systems
+COMP9211 Computer Architecture
+COMP9221 Microprocessors &amp; Embedded Sys
+COMP9222 Digital Circuits and Systems
+COMP9231 Integrated Digital Systems
+COMP9242 Advanced Operating Systems
+COMP9243 Distributed Systems
+COMP9244 Software View of Proc Architec
+COMP9245 Real-Time Systems
+COMP9282 Ext Micros &amp; Interfacing
+COMP9283 Ext Operating Systems
+COMP9311 Database Systems
+COMP9313 Big Data Management
+COMP9314 Next Generation Database Systs
+COMP9315 Database Systems Implementat&#39;n
+COMP9316 eCommerce Implementation
+COMP9317 XML and Databases
+COMP9318 Data Warehousing &amp; Data Mining
+COMP9319 Web Data Compression &amp; Search
+COMP9321 Web Applications Engineering
+COMP9322 Service-Oriented Architectures
+COMP9323 e-Enterprise Project
+COMP9331 Computer Networks&amp;Applications
+COMP9332 Network Routing and Switching
+COMP9333 Advanced Computer Networks
+COMP9334 Systems Capacity Planning
+COMP9335 Wireless Mesh&amp;Sensor Networks
+COMP9336 Mobile Data Networking
+COMP9337 Securing Wireless Networks
+COMP9414 Artificial Intelligence
+COMP9415 Computer Graphics
+COMP9416 Knowledge Based Systems
+COMP9417 Machine Learning &amp; Data Mining
+COMP9418 Advanced Machine Learning
+COMP9431 Robotic Software Architecture
+COMP9441 Security Engineering
+COMP9444 Neural Networks
+COMP9447 Security Engineering Workshop
+COMP9511 Human Computer Interaction
+COMP9514 Advanced Decision Theory
+COMP9515 Pattern Classification
+COMP9517 Computer Vision
+COMP9518 Pattern Recognition
+COMP9519 Multimedia Systems
+COMP9520 Ext Foundations of Computer Sc
+COMP9596 Research Project
+COMP9790 Principles of GNSS Positioning
+COMP9791 Modern Navigation &amp;Positioning
+COMP9801 Ext Design&amp;Analysis of Algo
+COMP9814 Ext Artificial Intelligence
+COMP9833 Ext Computer Networks &amp; Appl
+COMP9844 Ext Neural Networks
+COMP9901 P/T Res. Thesis Comp Sci &amp; Eng
+COMP9902 Res. Thesis Comp Sci &amp; Eng F/T
+COMP9910 Mgt&amp;Com Skills-CompSci&amp;Eng Res
+COMP9912 Project (24 UOC)
+COMP9930 Readings in Comp Sci and Eng
+COMP9945 Research Project
+CRIM3010 Comparative Criminal Justice
+CVEN1015 Computing
+CVEN1025 Computing
+CVEN2002 Engineering Computations
+CVEN2025 Engineering Computations 1
+CVEN2702 Engineering Computations
+CVEN3025 Engineering Computations 2
+CVEN4307 Steel &amp; Composite Structures
+CVEN8827 Composite Steel-Concrete Struc
+CVEN9820 Computational Struct Mechanics
+CVEN9822 Steel &amp; Composite Structures
+CVEN9827 Composite Steel-Concrete Struc
+DANC2000 Dance Analysis &amp; Composition 1
+DANC2005 Dance Analysis &amp; Composition 2
+DANC2015 Dance Analysis &amp; Composition 3
+ECON3213 Comparative Forecasting Techs
+ECON5122 Compet. in the Know. Econ.
+ECON5255 Computational Stats &amp; Econ Mod
+EDST1492 Computer Skills for Teachers
+EDST4092 Computer Skills for Teachers
+EDST4157 Computing Studies Method 1
+EDST4158 Computing Studies Method 2
+ELEC4343 Source Coding &amp; Compression
+ELEC4432 Computer Control &amp; Instrumenta
+ELEC4632 Computer Control Systems
+ELEC9401 Computer Control Systems 1
+ELEC9402 Computer Control Systems 2
+ELEC9403 Real Time Computing &amp; Control
+ELEC9733 Real Computing and Control
+ENGG1811 Computing for Engineers
+EURO2302 The Messiah Complex
+FINS5553 Insur. Comp. Oper. &amp; Manage.
+FNDN0301 Computing Studies
+FNDN0302 Computing Studies and Research
+FNDN0311 Computing Studies - T
+FOOD4220 Computer Applications
+FOOD4320 Computer Applications
+FOOD4537 Computing in Food Science
+FOOD9101 Complex Fluid Micro &amp; Rheology
+GBAT9131 Leadership in a Complex Enviro
+GEND1212 Analysing a Picture:Comp.&amp;Des.
+GEND4201 Design and Computing
+GENE8001 Computer Game Design
+GENM0515 Computers for Professionals
+GENP0515 Computers for Professionals
+GENS2001 The Computer
+GENS5525 The Comp: Its Impact, Sign&#39;fcnce
+GENT0407 Tv Soaps: a Comparative Study
+GENT0603 The Computer: Impact, Significan
+GENT0802 The Complexity of Everyday Life
+GENT1003 Computers into the 21st C
+GEOG3161 Computer Mapping &amp; Data Displa
+GEOG3861 Computer Mapping
+GEOG9014 Computer Mapping &amp;Data Display
+GEOG9210 Computer Mapping &amp; Data Displa
+GEOL0300 Computing &amp; Stats for Geol
+GEOL2041 Geological Computing
+GMAT1111 Introduction To Computing
+GMAT1150 Survey Methods&amp; Computations
+GMAT1300 Comp Appl in Geomatics
+GMAT2111 Principles of Computer Processin
+GMAT2112 Principles of Computer Processin
+GMAT2122 Computer Graphics 1
+GMAT2131 Survey Computations
+GMAT2350 Comp for Spatial Info Sciences
+GMAT2500 Surveying Computations A
+GMAT2550 Surveying Computations B
+GMAT3111 Survey Computations
+GMAT3122 Computer Graphics 1
+GMAT3231 Geodetic Computations
+GMAT4111 Data Analysis &amp; Computing 1
+GMAT4112 Data Analysis &amp; Computing 1
+GMAT5111 Data Analysis &amp; Computing 2
+GMAT5112 Data Analysis &amp; Computing 2
+GMAT5122 Computer Graphics 2
+HEAL9471 Comparative H&#39;lth Care Systems
+HEAL9501 Comp Tech for Health Serv Mngt
+HIST2487 The Messiah Complex
+HPSC2610 Computers, Brains &amp; Minds
+HPST2004 Computers, Brains &amp; Minds
+HPST2109 Computers, Brains &amp; Minds
+IDES2121 Introduction To Computing
+IDES3101 Design Studio 5: Complexity
+IDES3231 Adv Computer Aided Product Des
+IDES5153 Computer Graphic Applications
+IDES5154 Computer Aided Design
+IEST5009 Competencies in Sustainability
+IEST5010 Competencies in Sustainability
+ILAS0232 Computer Prog&#39;mng for Info. Appl
+ILAS0233 Computing Applications in The in
+INFS3607 Distributed Computer Systems
+IROB5732 Spec Topic- Internat &amp; Comp IR
+IROB5734 Adv Seminar-Internat &amp; Comp IR
+JURD7348 Harry Gibbs Moot Comp 6uoc
+JURD7419 Competition Law and Policy
+JURD7473 Asian Competition Law
+JURD7474 Competition Law and IP
+JURD7489 Complex Civil Litigation
+JURD7522 Competition Law
+JURD7559 Int&#39;l&amp;Comparative Law W&#39;shop
+JURD7610 Mediation Competition
+JURD7616 International &amp; Comparative IP
+JURD7648 Transitional Justice Intl Comp
+JURD7989 Comparative Anti-Terrorism Law
+JWST2104 The Messiah Complex
+LAND1131 Introduction To Computer Applica
+LAWS1032 Computer Applications to Law
+LAWS2065 Comparative Law
+LAWS2085 Comparative Law
+LAWS2110 Comparative Constitutional Law
+LAWS2148 Harry Gibbs Moot Comp 8uoc
+LAWS2410 Mediation Competition
+LAWS2589 Complex Civil Litigation
+LAWS3009 Comparative Criminal Justice:
+LAWS3022 Competition Law
+LAWS3035 Developing Comp Apps to Law
+LAWS3051 Telecomm. Competition &amp; Cons.
+LAWS3148 Harry Gibbs Moot Comp
+LAWS3159 Int&#39;l&amp;Comparative Law W&#39;shop
+LAWS3348 Transitional Justice Intl Comp
+LAWS3510 Mediation Competition
+LAWS3589 Complex Civil Litigation
+LAWS4016 International &amp; Comparative IP
+LAWS4019 Competition Law
+LAWS4089 Comparative Anti-Terrorism Law
+LAWS4120 Themes in Asian &amp; Compar. Law
+LAWS4133 Issues in Asian &amp; Comp Law
+LAWS4291 Comparative Constitutional Law
+LAWS4620 Computer Applications To Law
+LAWS4765 Complex Commercial Litigation
+LAWS5234 Competition Law and Regulation
+LAWS7003 Global Issues in Comp Policy
+LAWS8016 International &amp; Comparative IP
+LAWS8073 Asian Competition Law
+LAWS8074 Competition Law and IP
+LAWS8118 Legal Systems in Comp Persp
+LAWS8143 Comparative Patent Law
+LAWS8144 Comparative Trade Mark Law
+LAWS8219 Competition Law and Policy
+LAWS8289 Comparative Anti-Terrorism Law
+LAWS8348 Transitional Justice Intl Comp
+LAWS8765 Complex Commercial Litigation
+LAWS9973 Comparative Law
+LAWS9984 Int. &amp; Comp. Indigenous Law
+LEGT5531 Comp. Bus. &amp; Legal Strategies
+LEGT5602 Tax Admin. &amp; Compliance
+LIBS0233 Computer Applications in The Inf
+MANF3500 Computers in Manufacturing 1
+MANF4500 Computers in Manufacturing 2
+MANF4601 Comp Aided Production Mgmt A
+MANF4602 Comp Aided Production Mgmt B
+MANF8560 Computer Integrated Manufact.
+MANF9500 Computer-aided Progrmg for Numcl
+MANF9543 Comp Aided Design/Manufacture
+MANF9560 Computer Integrated Manufact.
+MARK3022 Computer Applications in Marketi
+MATH1061 Introductory Applied Computing
+MATH2301 Mathematical Computing
+MATH2430 Symbolic Computing
+MATH2520 Complex Analysis
+MATH2521 Complex Analysis
+MATH2620 Higher Complex Analysis
+MATH2621 Higher Complex Analysis
+MATH2810 Statistical Computing
+MATH2910 Higher Statistical Computing
+MATH3101 Computational Mathematics
+MATH3301 Advanced Math Computing
+MATH3311 Math Computing for Finance
+MATH3400 Logic &amp; Computability
+MATH3421 Logic and Computability
+MATH3430 Symbolic Computing
+MATH3680 Higher Complex Analysis
+MATH3790 Higher Computat. Combinatorics
+MATH3800 Statistical Computation 1
+MATH3810 Statistical Computation 2
+MATH3821 Stat Modelling &amp; Computing
+MATH3871 Bayesian Inference and Comp
+MATH4003 Maths and Comp Sci Honours F/T
+MATH4004 Maths and Comp Sci Honours P/T
+MATH5009 Comp&#39;l Coursework Thesis FT
+MATH5010 Comp&#39;l Coursework Thesis PT
+MATH5305 Computational Mathematics
+MATH5315 High Perf Numerical Computing
+MATH5335 Comput&#39;l Methods for Finance
+MATH5400 Logic &amp; Computability
+MATH5505 Computational Combinatorics
+MATH5685 Complex Analysis
+MATH5856 Intro to Stats and Stat Comput
+MATH5960 Bayesian Inference &amp; Comput&#39;n
+MATH9315 Topics in Mathematical Computing
+MATS1021 Computing in Materials Science
+MATS1264 Fibre Reinforced Plastic Composi
+MATS3064 Composite Materials
+MATS4005 Composites and Functional Mats
+MATS5342 Comp Modelling &amp; Design
+MATS6110 Computational Materials
+MBAX9131 Leadership in a Complex Enviro
+MECH1500 Computing 1M
+MECH3500 Computing 2M
+MECH3510 Computing Applications in Mech.
+MECH3530 Computing Applcts in Mechanical
+MECH3540 Computational Engineering
+MECH4130 Computer-aided Engineering Desig
+MECH4150 Design &amp; Maintenance of Componen
+MECH4500 Computing 3M
+MECH4620 Computational Fluid Dynamics
+MECH8620 Computational Fluid Dynamics
+MECH9150 Design &amp; Maintenance of Componen
+MECH9420 Composite Materials and Mechan
+MECH9620 Computational Fluid Dynamics
+MEFT5103 Computer Media
+MGMT2106 Comparative Management Systems
+MGMT5050 Teams, Ethics &amp; Comp Adv
+MGMT5802 Comp. Adv. Through People
+MINE0710 Computing 1
+MINE1720 Microcomputers (mining)
+MINE1730 Computer Applications in Mining
+MINE4082 Computational Methods
+MINE4810 Comp Methods in Geomechanics
+MTRN2500 Comp for MTRN
+MTRN3500 Comp Appl in Mechatonic Sys
+MTRN3530 Computing Applcts in Mech.Sys.
+PFST2000 Dance Analysis &amp; Composition 1
+PFST2005 Dance Analysis &amp; Composition 2
+PFST2011 Performance Composition
+PHAR9121 Postmarketing Compliance Meds
+PHCM9471 Comparative H&#39;lth Care Systems
+PHIL5206 AI &amp; Computer Science
+PHIL5207 Ai &amp; Computer Science 2A
+PHYS1601 Comp. Applic&#39;ns in Exp. Sci. 1
+PHYS2001 Mechanics &amp; Computational Phys
+PHYS2020 Computational Physics
+PHYS2120 Mechanics and Computational
+PHYS2601 Computer Applications 2
+PHYS3601 Computer Applications in Instrum
+PHYS3610 Computational Physics
+PHYS3620 Computer Based Signal Processing
+PLAN1061 Computer Literacy
+POLS2016 Concepts in Comparative Pol Cult
+POLS3953 Comparative Politics: Russia
+PSYC3191 Computer Science &amp; Psychology
+PTRL1013 Computing-Petroleum Engineers
+PTRL4013 Well Completion &amp; Stimulation
+PTRL5016 Well Completions &amp; Stimulation
+PTRL6016 Well Completions &amp; Stimulation
+REGS0044 Comp Law in Global Context
+REGS0115 Compliance: Financial Service
+REGS0218 Compliance: Financial Services
+REGS0428 Computer Applications in Linguis
+REGS0453 Multiple Regress. &amp; Stat Comp
+REGS0474 Comparative International Tax
+REGS0633 Comparative Corp &amp; Comm Law
+REGS0638 International Comparative Corp
+REGS0718 Energy Co-Compliance in Bldgs
+REGS3092 Comp Cntrl of Machines &amp; Proc
+REGS3265 Intl and Comparative Ind. Rel.
+REGS3410 Computer Networks
+REGS3873 Introduction To Computer Graphic
+REGS3909 Trade Marks &amp; Unfair Comp
+REGS3948 Competition Law
+REGS4045 Competition Reg. of Mergers
+REGS5618 Comp Integrated Manufacturing
+REGS7726 Composites &amp; Multiphase Polyme
+REGS7908 Service Managing for Comp.Adv.
+SART1608 Digital Composite 1
+SART1681 Multimedia Computing Elective1
+SART1810 Introduction to Computing
+SART2608 Digital Composite 2
+SART2681 Multimedia Computing Elective2
+SART2811 Multimedia Computing Workshop
+SART2835 Composition and Design
+SART3608 Digital Composite 3
+SART3681 Multimedia Computing Elective3
+SART3840 Advanced Multimedia Computing
+SART9725 Intro to Multimedia Computing
+SART9739 Multimedia Computing Elective
+SART9741 Composition and Design
+SDES1106 Design and Computers 1
+SDES1110 Design and Computers 2
+SDES1111 Integrated Design Computing 1
+SDES1211 Integrated Design Computing 2
+SDES1601 Colour,Composition &amp;Typography
+SDES2107 Design and Computers 3
+SDES2115 Design and Computers 2B
+SDES3107 Design and Computers 4
+SDES3173 Advanced Computer Graphics
+SDES4103 Design and Computers 4
+SDES6714 Intro 3D Computer Aided Design
+SLSP2902 Computers and Comm.
+SOCA3314 The Messiah Complex
+SOCI3401 Computer Analysis of Social Data
+SOCI3408 Computer Analysis of Social Data
+SOMA1608 Digital Composite
+SOMA1681 Intro Multimedia Computing
+SOMA1810 Introduction to Computing
+SOMA2402 Tangible Computing
+SOMA2608 Digital Composite 2
+SOMA2681 Advanced Multimedia Computing
+SOMA2811 Multimedia Computing Workshop
+SOMA3415 Compositional Project
+SOMA3608 Digital Composite 3
+SURV1111 Introduction To Computing
+SURV2111 Principles of Computer Processin
+SURV2122 Computer Graphics 1
+SURV3111 Survey Computations
+SURV3231 Geodetic Computations
+SURV4111 Data Analysis &amp; Computing 1
+SURV5111 Data Analysis &amp; Computing 2
+SURV5122 Computer Graphics 2
+SURV6121 Computer Graphics
+TABL1002 Computer Information Systems
+TABL2053 Acct for Complex Struct &amp; Inst
+TABL3044 Comparative Tax Systems
+TABL5544 Comparative Tax Systems
+TEDG1101 Computers in Education
+TEDG1106 Computer-based Resources: Design
+TEDG1107 Managing With Computers in Schoo
+TEDG1112 Computers - Gifted &amp; Talented St
+TEDG1113 Computer Control Technology in E
+TEED1134 Fundamentals of Computing
+TEED2119 Computers &amp; People
+TELE4343 Source Coding and Compression
+TELE9302 Computer Networks
+TEXT2501 Computing Applications
+ZACM3011 Component Design
+ZACM3433 Compressible Flow
+ZACM4020 Computational Structures
+ZACM4031 Compressible Flow
+ZACM4913 Eng App of Comp Fluid Dynamics
+ZBUS2200 Markets and Competition
+ZEIT1101 Computational Problem Solving
+ZEIT1110 Computer Games
+ZEIT2102 Computer Technology
+ZEIT2305 Computer Games
+ZEIT3113 Computer Languages &amp; Algorithm
+ZEIT3304 Computing Proj - Info Sys
+ZEIT3307 Computer Games
+ZEIT4003 Computational Fluid Dynamics
+ZEIT7101 Computational Problem Solving
+ZEIT8020 Computer Network Operations
+ZEIT8028 Computer Forensics
+ZEIT9100 Computer Science Research F/T
+ZEIT9101 Computer Science Research P/T
+ZGEN2300 Computers in Society
+ZGEN2301 Computer Games
+ZHSS8431 Comparative Defence Planning
+ZINT1001 Eng Comp Methods 1
+ZITE1001 Computer Tools for Engineers
+ZITE1101 Intro to Computer Science
+ZITE2101 Computer Languages &amp; Algorithm
+ZITE2102 Computer Technology
+ZITE3101 Computing Proj - Comp Sci
+ZITE3105 Human Computer Interaction
+ZITE3106 Interactive Computer Graphics
+ZITE3113 Computer Languages &amp; Algorithm
+ZITE3211 Microcomputer Interfacing
+ZITE3304 Computing Proj - Info Sys
+ZITE4101 Computer Sci 4 (Comb Hons) F/T
+ZITE4102 Computer Sci 4 (Comb Hon) P/T
+ZITE4103 Computer Science 4 (Hons) F/T
+ZITE4104 Computer Science 4 (Hons) P/T
+ZITE8103 Computer Graphics
+ZITE8104 Computer Security
+ZITE8105 Computer Speech Processing
+ZITE8145 SoftComp
+ZITE9100 Computer Science Research F/T
+ZITE9101 Computer Science Research P/T
+ZPEM3302 Complex Variables
+</pre>
+
+The second one looks better because the data itself isn't transformed,
+only the internal comparisons.
+<p>
+If we want to know how many courses have
+"computing" or "computer" in their title,
+we have to use <code>egrep</code>, which recognises the alternative operator "|",
+and <code>wc</code> to count the number of matches.
+There are a couple of ways to construct the regexp:
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep -i &#39;computer|computing&#39; course_codes | wc</kbd>
+
+    262    1149    9027
+</pre>
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep -i &#39;comput(er|ing)&#39; course_codes | wc</kbd>
+
+    262    1149    9027
+</pre>
+
+If you don't like the irrelevant word and character counts,
+use <code>wc -l</code>.
+<p>
+Most of these 80 matches were CSE offerings,
+whose course codes begin with COMP, SENG or BINF.
+Which of the matches were courses offered by other schools?
+<p>
+Think about it for a moment.... There's no "but not" regexp operator,
+so instead we construct a composite filter with an extra step to deal
+with eliminating the CSE courses:
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep -i &#39;computer|computing&#39; course_codes | egrep -v &#39;^(COMP|SENG|BINF)&#39;</kbd>
+
+ACSC1600 Computer Science 1
+ACSC1800 Computer Science 1E
+ACSC2015 Interactive Computer Graphics
+ACSC2020 Computer Science Core B2
+ACSC2021 Computer Systems Architectrue 2
+ACSC2107 Computer Languages B
+ACSC2601 Computer Science 2A
+ACSC2602 Computer Science 2B
+ACSC2802 Computer Science 2EE
+ACSC3003 Computer Project
+ACSC3029 Computing Project 3
+ACSC3030 Cryptography &amp; Computer Securi
+ACSC3601 Computer Science 3A
+ACSC3603 Computer Science 3C
+ACSC4191 Computer Science 4 (Hons) F/T
+ACSC7304 Computer Graphics
+ACSC7306 Computer Speech Processing
+ACSC7336 Computer Security
+ACSC8248 Computer Graphics (12 Cpt)
+ACSC9000 Computer Science Research F/T
+ACSC9001 Computer Science Research P/T
+AELE2007 Computer Design
+AELE2508 Microcomputer Interfacing
+AELE3031 Microcomputer Interfacing
+AELE4511 Computer Control Theory
+ANCE8002 Supercomputing Techniques
+ARCH5202 Computer Applications 2
+ARCH5203 Computer Applications 3
+ARCH5220 Computer Graphics Programming 1
+ARCH5221 Computer Graphics Programming 2
+ARCH5223 Computer Applications 2
+ARCH5942 Arctitectural Computing Seminar
+ARCH6201 Architectural Computing 1
+ARCH6205 Architectural Computing 2
+ARCH6214 Architectural Computing 2
+ARCH7204 Design Computing Theory
+ARCH7205 Computer Graphics Programming
+ARTS2301 Computers, Brains &amp; Minds
+ATAX0002 Computer Information Systems
+AVEN1500 Computing for Aviation
+BENV1141 Computers and Information Tech
+BENV1242 Computer-Aided Design
+BENV2405 Computer Graphics Programming
+BIOM9501 Computing for Biomedical Eng
+BLDG2281 Introduction To Computing
+BLDG3282 Computer Apps in Building
+BLDG3482 Computer Aplications in Constr
+CEIC5310 Computing Studies in The Process
+CEIC8310 Computing Studies Proc Ind
+CEIC8335 Adv Computer Methods
+CHEM3640 Computers in Chemistry
+CIVL1015 Computing
+CIVL1106 Computing &amp; Graphics
+COFA2682 Multi-media Computing Unit 3
+COFA3681 Multi-media Computing Elective 1
+COFA5116 Design &amp; Computers
+COFA5216 Design &amp; Computers 1
+COFA5240 Design &amp; Computers 2 Cad
+COFA5241 Design &amp; Computers 2 Graphics
+COFA5338 Design &amp; Computers 3 - Cad
+COFA5339 Design &amp; Computers 3 - Graphic
+COFA8670 Intro To Multi-media Computing
+CVEN1015 Computing
+CVEN1025 Computing
+EDST1492 Computer Skills for Teachers
+EDST4092 Computer Skills for Teachers
+EDST4157 Computing Studies Method 1
+EDST4158 Computing Studies Method 2
+ELEC4432 Computer Control &amp; Instrumenta
+ELEC4632 Computer Control Systems
+ELEC9401 Computer Control Systems 1
+ELEC9402 Computer Control Systems 2
+ELEC9403 Real Time Computing &amp; Control
+ELEC9733 Real Computing and Control
+ENGG1811 Computing for Engineers
+FNDN0301 Computing Studies
+FNDN0302 Computing Studies and Research
+FNDN0311 Computing Studies - T
+FOOD4220 Computer Applications
+FOOD4320 Computer Applications
+FOOD4537 Computing in Food Science
+GEND4201 Design and Computing
+GENE8001 Computer Game Design
+GENM0515 Computers for Professionals
+GENP0515 Computers for Professionals
+GENS2001 The Computer
+GENT0603 The Computer: Impact, Significan
+GENT1003 Computers into the 21st C
+GEOG3161 Computer Mapping &amp; Data Displa
+GEOG3861 Computer Mapping
+GEOG9014 Computer Mapping &amp;Data Display
+GEOG9210 Computer Mapping &amp; Data Displa
+GEOL0300 Computing &amp; Stats for Geol
+GEOL2041 Geological Computing
+GMAT1111 Introduction To Computing
+GMAT2111 Principles of Computer Processin
+GMAT2112 Principles of Computer Processin
+GMAT2122 Computer Graphics 1
+GMAT3122 Computer Graphics 1
+GMAT4111 Data Analysis &amp; Computing 1
+GMAT4112 Data Analysis &amp; Computing 1
+GMAT5111 Data Analysis &amp; Computing 2
+GMAT5112 Data Analysis &amp; Computing 2
+GMAT5122 Computer Graphics 2
+HPSC2610 Computers, Brains &amp; Minds
+HPST2004 Computers, Brains &amp; Minds
+HPST2109 Computers, Brains &amp; Minds
+IDES2121 Introduction To Computing
+IDES3231 Adv Computer Aided Product Des
+IDES5153 Computer Graphic Applications
+IDES5154 Computer Aided Design
+ILAS0232 Computer Prog&#39;mng for Info. Appl
+ILAS0233 Computing Applications in The in
+INFS3607 Distributed Computer Systems
+LAND1131 Introduction To Computer Applica
+LAWS1032 Computer Applications to Law
+LAWS4620 Computer Applications To Law
+LIBS0233 Computer Applications in The Inf
+MANF3500 Computers in Manufacturing 1
+MANF4500 Computers in Manufacturing 2
+MANF8560 Computer Integrated Manufact.
+MANF9500 Computer-aided Progrmg for Numcl
+MANF9560 Computer Integrated Manufact.
+MARK3022 Computer Applications in Marketi
+MATH1061 Introductory Applied Computing
+MATH2301 Mathematical Computing
+MATH2430 Symbolic Computing
+MATH2810 Statistical Computing
+MATH2910 Higher Statistical Computing
+MATH3301 Advanced Math Computing
+MATH3311 Math Computing for Finance
+MATH3430 Symbolic Computing
+MATH3821 Stat Modelling &amp; Computing
+MATH5315 High Perf Numerical Computing
+MATH9315 Topics in Mathematical Computing
+MATS1021 Computing in Materials Science
+MECH1500 Computing 1M
+MECH3500 Computing 2M
+MECH3510 Computing Applications in Mech.
+MECH3530 Computing Applcts in Mechanical
+MECH4130 Computer-aided Engineering Desig
+MECH4500 Computing 3M
+MEFT5103 Computer Media
+MINE0710 Computing 1
+MINE1720 Microcomputers (mining)
+MINE1730 Computer Applications in Mining
+MTRN3530 Computing Applcts in Mech.Sys.
+PHIL5206 AI &amp; Computer Science
+PHIL5207 Ai &amp; Computer Science 2A
+PHYS2601 Computer Applications 2
+PHYS3601 Computer Applications in Instrum
+PHYS3620 Computer Based Signal Processing
+PLAN1061 Computer Literacy
+PSYC3191 Computer Science &amp; Psychology
+PTRL1013 Computing-Petroleum Engineers
+REGS0428 Computer Applications in Linguis
+REGS3410 Computer Networks
+REGS3873 Introduction To Computer Graphic
+SART1681 Multimedia Computing Elective1
+SART1810 Introduction to Computing
+SART2681 Multimedia Computing Elective2
+SART2811 Multimedia Computing Workshop
+SART3681 Multimedia Computing Elective3
+SART3840 Advanced Multimedia Computing
+SART9725 Intro to Multimedia Computing
+SART9739 Multimedia Computing Elective
+SDES1106 Design and Computers 1
+SDES1110 Design and Computers 2
+SDES1111 Integrated Design Computing 1
+SDES1211 Integrated Design Computing 2
+SDES2107 Design and Computers 3
+SDES2115 Design and Computers 2B
+SDES3107 Design and Computers 4
+SDES3173 Advanced Computer Graphics
+SDES4103 Design and Computers 4
+SDES6714 Intro 3D Computer Aided Design
+SLSP2902 Computers and Comm.
+SOCI3401 Computer Analysis of Social Data
+SOCI3408 Computer Analysis of Social Data
+SOMA1681 Intro Multimedia Computing
+SOMA1810 Introduction to Computing
+SOMA2402 Tangible Computing
+SOMA2681 Advanced Multimedia Computing
+SOMA2811 Multimedia Computing Workshop
+SURV1111 Introduction To Computing
+SURV2111 Principles of Computer Processin
+SURV2122 Computer Graphics 1
+SURV4111 Data Analysis &amp; Computing 1
+SURV5111 Data Analysis &amp; Computing 2
+SURV5122 Computer Graphics 2
+SURV6121 Computer Graphics
+TABL1002 Computer Information Systems
+TEDG1101 Computers in Education
+TEDG1106 Computer-based Resources: Design
+TEDG1107 Managing With Computers in Schoo
+TEDG1112 Computers - Gifted &amp; Talented St
+TEDG1113 Computer Control Technology in E
+TEED1134 Fundamentals of Computing
+TEED2119 Computers &amp; People
+TELE9302 Computer Networks
+TEXT2501 Computing Applications
+ZEIT1110 Computer Games
+ZEIT2102 Computer Technology
+ZEIT2305 Computer Games
+ZEIT3113 Computer Languages &amp; Algorithm
+ZEIT3304 Computing Proj - Info Sys
+ZEIT3307 Computer Games
+ZEIT8020 Computer Network Operations
+ZEIT8028 Computer Forensics
+ZEIT9100 Computer Science Research F/T
+ZEIT9101 Computer Science Research P/T
+ZGEN2300 Computers in Society
+ZGEN2301 Computer Games
+ZITE1001 Computer Tools for Engineers
+ZITE1101 Intro to Computer Science
+ZITE2101 Computer Languages &amp; Algorithm
+ZITE2102 Computer Technology
+ZITE3101 Computing Proj - Comp Sci
+ZITE3105 Human Computer Interaction
+ZITE3106 Interactive Computer Graphics
+ZITE3113 Computer Languages &amp; Algorithm
+ZITE3211 Microcomputer Interfacing
+ZITE3304 Computing Proj - Info Sys
+ZITE4101 Computer Sci 4 (Comb Hons) F/T
+ZITE4102 Computer Sci 4 (Comb Hon) P/T
+ZITE4103 Computer Science 4 (Hons) F/T
+ZITE4104 Computer Science 4 (Hons) P/T
+ZITE8103 Computer Graphics
+ZITE8104 Computer Security
+ZITE8105 Computer Speech Processing
+ZITE9100 Computer Science Research F/T
+ZITE9101 Computer Science Research P/T
+</pre>
+
+The last ones are from the Computer Science school at ADFA.
+<li>
+Consider a file called <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters//enrollments">enrollments</a>
+which contains data about student enrollment in courses.
+There is one line for each student enrolled in a course:
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">ls -l enrollments</kbd>
+
+-rw-r--r-- 1 cs2041 cs2041 855297 May 30  2019 enrollments
+</pre>
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">wc enrollments</kbd>
+
+  7569  42802 855297 enrollments
+</pre>
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">head enrollments</kbd>
+
+COMP1511|5013566|Xin, Mackenzie Darren                             |3648/2|COMPI1 MTRNAH|071.800|17s2|19910428|M
+COMP9902|5079970|Park, Xue Hannah Vanessa                          |8543  |ELECAH       |079.333|17s2|19900209|F
+COMP1511|5059072|Chung, Michael Jia Tianyu                         |3778/1|COMPCS       |057.250|17s2|19990801|M
+COMP1521|5060774|Lim, Stephanie Lauren                             |3785/1|COMPA1       |000.000|17s2|19890113|F
+COMP1531|5060774|Lim, Stephanie Lauren                             |3785/1|COMPA1       |000.000|17s2|19890113|F
+COMP2521|5060774|Lim, Stephanie Lauren                             |3785/1|COMPA1       |000.000|17s2|19890113|F
+COMP9020|5060538|Bi, Samuel Shiyu                                  |6021  |COMPA1       |078.125|17s2|19911004|M
+COMP9021|5060538|Bi, Samuel Shiyu                                  |6021  |COMPA1       |078.125|17s2|19911004|M
+COMP9902|5072116|Hu, Kai Zhi Patrick                               |3707/1|SENGAH       |070.750|17s2|19930424|M
+COMP1511|5036926|Fang, Rebecca Lauren                              |8543  |COMPCS       |000.000|17s2|20000921|F
+</pre>
+
+The following commands count how many students are enrolled in
+COMP2041 or COMP9041.
+The course IDs differ only in one character,
+so a character class is used instead of alternation.
+<p>
+The first version below is often ferred because initially you may want
+to know "<i>how many xxx</i>", then having found that out
+the next question might be, "<i>well give me a sample of 10 or so of them</i>".
+Then it's a simple matter of replacing <code>wc</code> by <code>head</code>.
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep &#39;^COMP[29]041&#39; enrollments | wc -l</kbd>
+
+511
+</pre>
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep -c &#39;^COMP[29]041&#39; enrollments</kbd>
+
+511
+</pre>
+
+The last field field in the enrollment file records the student's gender.
+This command counts the number of female students enrolled in the courses.
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep &#39;^COMP[29]041&#39; enrollments | egrep &#39;F$&#39; | wc -l</kbd>
+
+106
+</pre>
+
+Not a very good gender balance, is it?
+<p>
+By the way, the two <code>egrep</code>s could have been combined into one. How?
+<p>
+This command will give a sorted list of course codes:
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">cut -d&#39;|&#39; -f1 enrollments | sort | uniq</kbd>
+
+COMP1400
+COMP1511
+COMP1521
+COMP1531
+COMP2041
+COMP2121
+COMP2521
+COMP3151
+COMP3161
+COMP3222
+COMP3331
+COMP3421
+COMP3431
+COMP3511
+COMP3601
+COMP3901
+COMP4121
+COMP4161
+COMP4336
+COMP4418
+COMP4904
+COMP4905
+COMP4920
+COMP4930
+COMP4931
+COMP4941
+COMP6445
+COMP6714
+COMP6733
+COMP6741
+COMP6771
+COMP6845
+COMP9020
+COMP9021
+COMP9024
+COMP9032
+COMP9041
+COMP9151
+COMP9161
+COMP9222
+COMP9242
+COMP9311
+COMP9313
+COMP9321
+COMP9322
+COMP9323
+COMP9331
+COMP9336
+COMP9415
+COMP9418
+COMP9431
+COMP9444
+COMP9511
+COMP9517
+COMP9596
+COMP9900
+COMP9901
+COMP9902
+COMP9945
+</pre>
+
+The student records system known to users as myUNSW is built on top of
+a large US product known as PeopleSoft
+(the company was taken over by Oracle in 2004).
+On a scale of 1 to 10 the quality of the design of this product is about 3.
+One of its many flaws is its insistence that everybody must have two names,
+a "Last Name" and a "First Name", neither of which can be empty.
+To signify that a person has only a single name
+(common in Sri Lanka, for example), the system stores a dot character
+in the "First Name" field.
+The enrollments file shows the data as stored in the system,
+with a comma and space separating the component names.
+It has some single-named people (note that the names themselves
+have been disguised):
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep &#39;, \.&#39; enrollments</kbd>
+
+COMP1511|5007185|Nguyen, .                                         |3764/1|COMPCS       |000.000|17s2|19861014|M
+COMP3331|5071779|Yuan, .                                           |3785/2|COMPCS       |072.063|17s2|19901016|M
+COMP3511|5071779|Yuan, .                                           |3785/2|COMPCS       |072.063|17s2|19901016|M
+COMP4920|5071779|Yuan, .                                           |3785/2|COMPCS       |072.063|17s2|19901016|M
+COMP9021|5054494|Dang, .                                           |8543  |ELECAH PHYSC1|000.000|17s2|19931117|M
+COMP3421|5072547|Zhou, .                                           |3978/2|COMPA1       |068.167|17s2|19870503|M
+COMP3431|5072547|Zhou, .                                           |3978/2|COMPA1       |068.167|17s2|19870503|M
+COMP3601|5072547|Zhou, .                                           |3978/2|COMPA1       |068.167|17s2|19870503|M
+COMP9901|5065745|Lo, .                                             |8543  |COMPAS COMPIS|082.545|17s2|19981128|M
+COMP9024|5099838|Chen, .                                           |3978/1|COMPCS       |072.500|17s2|19980127|F
+COMP9041|5099838|Chen, .                                           |3978/1|COMPCS       |072.500|17s2|19980127|F
+COMP9321|5099838|Chen, .                                           |3978/1|COMPCS       |072.500|17s2|19980127|F
+COMP9331|5099838|Chen, .                                           |3978/1|COMPCS       |072.500|17s2|19980127|F
+</pre>
+
+What would have happened if we forgot the backslash?
+<p>
+If we wanted to know how many different students there were of this type
+rather than all enrollments,
+just cut out the second field (student ID) and use <code>uniq</code>.
+It's not necessary to sort the data in this case only because
+the data is <i><b>clustered,</b></i> that is, all equal values are adjacent
+although they're not necessarily sorted.
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep &#39;, \.&#39; enrollments | cut -d&#39;|&#39; -f2 | uniq | wc</kbd>
+
+      6       6      48
+</pre>
+
+<li>
+Now let us turn our attention from students and courses to programs.
+The <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters//enrollments">enrollments</a> file, as well as linking
+a student to the courses they're taking, also links them to the
+program (degree) that they are currently enrolled in.
+Consider that we want to find out the program codes of the students
+taking COMP2041.
+The following pipeline will do this:
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep &#39;COMP[29]041&#39; enrollments | cut -d&#39;|&#39; -f4 | cut -d/ -f1  | sort | uniq</kbd>
+
+1540  
+1650  
+2765  
+3133
+3436
+3529
+3554
+3564
+3645
+3647
+3648
+3707
+3710
+3711
+3715
+3725
+3731
+3736
+3761
+3762
+3764
+3767
+3768
+3772
+3778
+3781
+3782
+3784
+3785
+3789
+3946
+3947
+3948
+3956
+3959
+3961
+3962
+3967
+3968
+3969
+3970
+3978
+3979
+3983
+3984
+4515
+5543  
+6001  
+6021  
+7543  
+8009
+8338  
+8543  
+8621  
+</pre>
+
+If we want to know how many students come from each program,
+ordered from most common program to least common program, try this:
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep COMP[29]041 enrollments | cut -d&#39;|&#39; -f4 | cut -d/ -f1 | sort | uniq -c | sort -nr</kbd>
+
+    175 8543  
+     76 3707
+     38 3978
+     26 3778
+     17 1650  
+     14 7543  
+     11 5543  
+     11 3784
+     10 3967
+      9 3772
+      9 3764
+      9 3645
+      8 3983
+      6 3781
+      6 3768
+      5 6021  
+      5 3969
+      5 3959
+      5 3715
+      4 3970
+      4 3785
+      4 3762
+      4 3736
+      3 6001  
+      3 4515
+      3 3946
+      3 3782
+      3 3767
+      3 3725
+      2 3956
+      2 3948
+      2 3789
+      2 3761
+      2 3711
+      2 3648
+      2 3647
+      1 8621  
+      1 8338  
+      1 8009
+      1 3984
+      1 3979
+      1 3968
+      1 3962
+      1 3961
+      1 3947
+      1 3731
+      1 3710
+      1 3564
+      1 3554
+      1 3529
+      1 3436
+      1 3133
+      1 2765  
+      1 1540  
+</pre>
+
+Note that a tab is usually inserted between the count and the data,
+but not all implementations of the <code>uniq</code> command ensure this.
+<li>
+<p>
+Consider a file called <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters//program_codes">program_codes</a>
+that contains the code and name of each program offered at UNSW
+(excluding research programs):
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">wc program_codes</kbd>
+
+ 1798  6466 46572 program_codes
+</pre>
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">head program_codes</kbd>
+
+0350 Medicine (Prince Henry/POW)
+0351 Medicine (SWS Clinical School)
+0352 Medicine (St George)
+0353 Medicine (St Vincent&#39;s)
+0360 Pathology
+0370 Physiology and Pharmacology
+0375 Rural Health
+0380 Obstetrics and Gynaecology
+0390 Psychiatry
+0400 Surgery (Prince Henry/POW)
+</pre>
+
+We can use this file to give more details of the programs that COMP2041
+students are taking, if some users don't want to deal with just course
+codes.
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep COMP[29]041 enrollments | cut -d&#39;|&#39; -f4 | cut -d/ -f1 | sort | uniq | join - program_codes</kbd>
+
+1540  Economics
+1650  Computer Science and Eng
+2765  Computer Science and Eng
+3133 Mat Sci and Eng Hons/BiomedEng
+3436 Music
+3529 Commerce/Science
+3554 Commerce (Co-op)
+3564 Economics / Science (Adv Math)
+3645 Computer Engineering
+3647 Bioinformatics
+3648 Software Engineering
+3707 Engineering (Honours)
+3710 Mechanical &amp; Manufacturing Eng
+3711 Mechanical &amp; Manf Eng/Science
+3715 Engineering/Commerce
+3725 Electrical Engineering/Science
+3731 BE ME Electrical Engineering
+3736 BE (Hons) ME Elec Eng
+3761 Adv Math (Hons) / Eng (Hons)
+3762 AdvSci(Hons)/Engineering(Hons)
+3764 Engineering (Hons)/Commerce
+3767 Engineering (Hons) / Science
+3768 Eng (Hons) / MBiomedE
+3772 Engineering(Hons)/Computer Sci
+3946 Adv Maths (Hons)/Computer Sci
+3947 Science / Arts
+3956 Advanced Mathematics (Honours)
+3961 Engineering (Honours) / Arts
+3962 Advanced Science (Honours)
+3967 Commerce / Computer Science
+3968 Computer Science / Arts
+3969 Media Arts (Hons) / Comp Sci
+3970 Science
+3978 Computer Science
+3979 Information Systems
+3983 Science/Computer Science
+3984 Computer Science / Law
+4515 Comp Sci &amp; Eng (Honours)
+5543  Information Technology
+6001  Study Abroad Program
+6021  Exchange Program
+7543  Computing
+8009 Technology and Innovation Mgmt
+8338  Engineering Science
+8543  Information Technology
+8621  Engineering
+</pre>
+
+We can combine the enrollment counts (for both courses)
+with the program titles to produce a self-descriptive tally.
+It's even better if it's in decreasing order of popularity,
+so after joining the tallies with the program titles,
+re-sort the composite data:
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">egrep &#39;COMP[29]041&#39; enrollments | cut -d&#39;|&#39; -f4 | cut -d/ -f1 | sort | uniq -c | join -1 2 -a 1 - program_codes  | sort -k2rn</kbd>
+
+8543 175  Information Technology
+3707 76 Engineering (Honours)
+3978 38 Computer Science
+3778 26
+1650 17  Computer Science and Eng
+7543 14  Computing
+3784 11
+5543 11  Information Technology
+3967 10 Commerce / Computer Science
+3645 9 Computer Engineering
+3764 9 Engineering (Hons)/Commerce
+3772 9 Engineering(Hons)/Computer Sci
+3983 8 Science/Computer Science
+3768 6 Eng (Hons) / MBiomedE
+3781 6
+3715 5 Engineering/Commerce
+3959 5
+3969 5 Media Arts (Hons) / Comp Sci
+6021 5  Exchange Program
+3736 4 BE (Hons) ME Elec Eng
+3762 4 AdvSci(Hons)/Engineering(Hons)
+3785 4
+3970 4 Science
+3725 3 Electrical Engineering/Science
+3767 3 Engineering (Hons) / Science
+3782 3
+3946 3 Adv Maths (Hons)/Computer Sci
+4515 3 Comp Sci &amp; Eng (Honours)
+6001 3  Study Abroad Program
+3647 2 Bioinformatics
+3648 2 Software Engineering
+3711 2 Mechanical &amp; Manf Eng/Science
+3761 2 Adv Math (Hons) / Eng (Hons)
+3789 2
+3948 2
+3956 2 Advanced Mathematics (Honours)
+1540 1  Economics
+2765 1  Computer Science and Eng
+3133 1 Mat Sci and Eng Hons/BiomedEng
+3436 1 Music
+3529 1 Commerce/Science
+3554 1 Commerce (Co-op)
+3564 1 Economics / Science (Adv Math)
+3710 1 Mechanical &amp; Manufacturing Eng
+3731 1 BE ME Electrical Engineering
+3947 1 Science / Arts
+3961 1 Engineering (Honours) / Arts
+3962 1 Advanced Science (Honours)
+3968 1 Computer Science / Arts
+3979 1 Information Systems
+3984 1 Computer Science / Law
+8009 1 Technology and Innovation Mgmt
+8338 1  Engineering Science
+8621 1  Engineering
+</pre>
+
+Note the curious extra space before the title of programs 8543, 6021, and others.
+It took me a while to work it out, can you?
+(Hint: how are the programs shown in the enrollment file?)
+Suggest an appopriate change to the pipeline.
+
+<li>
+Lecture exercises on <code>wc</code>:
+<ol type="a">
+<li> how many different programs does UNSW offer?
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">wc -l program_codes</kbd>
+
+1798 program_codes
+</pre>
+
+<li> how many times was WebCMS accessed?
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">wc -l access_log</kbd>
+
+59779 access_log
+</pre>
+
+<li> how many students are studying in CSE?
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">wc -l enrollments</kbd>
+
+7569 enrollments
+</pre>
+
+<p>
+The above solutions assume that we're talking about total enrollments.
+If the question actually meant how many distinct indivduals are
+studying courses offered by CSE, then we'd answer it as:
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">cut -d&#39;|&#39; -f2 enrollments | sort | uniq | wc -l</kbd>
+
+3791
+</pre>
+
+<li> how many words are there in the <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters//book">book</a>?
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">wc -w book</kbd>
+
+60428 book
+</pre>
+
+<li> how many lines are there in the <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters//story">story</a>?
+
+<pre is="tty" style="max-height: 32em; overflow: auto;" ><kbd is="sh">wc -l story</kbd>
+
+87 story
+</pre>
+</ol>
+
+</ol>
+</div>
+            </div>
+</div>
+</div>
+</section>
+
+
+
+<section class="homepage-section" id="all-links">
+<h2>All Links</h2>
+
+    
+
+    
+
+
+
+
+<dl class="row">
+
+  <dt class="col-4 text-right">All Tutorial Questions</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/tut/01/questions">01</a>
+      </li>
+    </ul>
+  </dd>
+
+  <dt class="col-4 text-right">All Tutorial Sample Answers</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    
+    </ul>
+  </dd>
+
+  <dt class="col-4 text-right">All Laboratory Exercises</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/lab/01/questions">01</a>
+      </li>
+    </ul>
+  </dd>
+
+  <dt class="col-4 text-right">All Laboratory Sample Solutions</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    
+    </ul>
+  </dd>
+
+  <dt class="col-4 text-right">All Weekly Test Questions</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    
+    </ul>
+  </dd>
+
+  <dt class="col-4 text-right">All Weekly Test Sample Answers</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    
+    </ul>
+  </dd>
+
+  <dt class="col-4 text-right">Course Overview</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/lec/course_overview/slides">slides</a>
+      </li><li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/lec/course_overview/notes">notes</a>
+      </li>
+    </ul>
+  </dd>
+
+  <dt class="col-4 text-right">Filters</dt>
+  <dd class="col-8">
+    <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/lec/filters/slides">slides</a>
+      </li><li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/lec/filters/notes">notes</a>
+      </li><li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters/index">code</a>
+      </li><li class="list-inline-item">
+        <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/code/filters/command_line_examples.html">Command Line Examples</a>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+</section>
+
+
+<section class="homepage-section" id="relevant-xkcd">
+
+<script type="text/javascript" src="/~cs2041/20T2/flask.cgi/static/xkcd.js?44141589967811.0"></script>
+
+</section>
+
+
+
+
+</main>
+
+<footer class="mt-3 pt-3 bg-dark text-center no-print">
+<p class="text-muted">
+<strong>COMP(2041|9044) 20T2: Software Construction</strong>
+is brought to you by <br />
+the <a href="https://www.cse.unsw.edu.au/">School of Computer Science and Engineering</a><br />
+at the <a href="https://www.unsw.edu.au/">University of New South Wales</a>, Sydney.<br />
+For all enquiries, please email the class account at
+<a href="mailto:@cse.unsw.edu.au">cs2041@cse.unsw.edu.au</a><br />
+
+<small>CRICOS Provider 00098G</small>
+</p>
+
+
+</footer>
+
+</body>
+</html>

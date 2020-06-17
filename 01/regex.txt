@@ -1,0 +1,10 @@
+^ Start of line
+$ End of line
+
+
+. ANY CHAR
+[..] SET  ("[abc]bc" -> "abc","bbc","cbc")
+[^abc]
+
+
+()

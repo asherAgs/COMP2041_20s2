@@ -1,0 +1,20 @@
+Write a regexp to match C preprocessor commands in a C program.
+Write a regexp to match all the lines in a C program except preprocessor commands
+Write a regexp to find line in a C program with trailing white space - one or more white space at the end of line
+
+Write a regexp to match the names Barry, Harry, Larry and Parry
+
+
+Write a regexp to match a string containing the word hello followed later by the word world
+
+Write regexp to match the word calendar and all mis-spellings with 'a' replaced 'e' or vice-versa
+
+"c[ae]l[ae]nd[ae]r"
+
+clenda
+
+
+
+
+Write regexp to match a list of positive integers separated by commas, e.g. 2,4,8,16,32
+Write regexp to match a C string whose last character is newline

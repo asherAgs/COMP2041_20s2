@@ -1,0 +1,17 @@
+COMP2041 student Nelson wrote this script named start_lab03.sh to run before the Week 3 lab.
+
+    #!/bin/sh
+    cd ~/labs/03
+    ex1=jpg2png
+    ex2=email_image
+    ex3=date_image
+    ex4=tag_music
+
+But when he ran his script, it didn't seem to work:
+pwd
+
+    /home/z1234567
+    ./start_lab03.sh
+    pwd
+    /home/z1234567
+    echo $ex1 $ex2 $ex3 $ex4

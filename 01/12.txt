@@ -1,0 +1,42 @@
+Consider the following columnated (space-delimited) data file containing marks information for a single subject:
+
+2111321 37 FL
+2166258 67 CR
+2168678 84 DN
+2186565 77 DN
+2190546 78 DN
+2210109 50 PS
+2223455 95 HD
+2266365 55 PS
+...
+Assume that the student number occurs at the beginning of the line, that the file is sorted on student number, and that nobody scores 100.
+
+Give calls to the sort filter to display the data:
+
+In order on student number
+
+in ascending order on mark
+
+in descending order on mark
+
+Give calls to the egrep filter to select details of:
+
+students who failed
+
+students who scored above 90
+students with even student numbers
+
+Give a pipeline to print:
+
+the details for the top 10 students (ordered by mark)
+
+the details for the bottom 5 students (ordered by mark)
+
+Assuming that the command cut -d' ' -f 3 can extract just the grades (PS, etc.), write a pipeline to show how many people achieved each grade (i.e. the grade distribution). E.g. for the above data:
+
+    1 CR
+    3 DN
+    1 FL
+    1 HD
+    2 PS
+        
