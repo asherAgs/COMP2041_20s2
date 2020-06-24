@@ -1,0 +1,15 @@
+$x  SCALAR
+@x  ARRAY
+<x> FILE HANDLER
+
+
+
+$x = "$2.50"
+
+"$2.50" vs '$2.50'
+
+
+SHELL       PERL
+$0          $0
+$1          $ARGV[0]
+$2          $ARGV[1]
