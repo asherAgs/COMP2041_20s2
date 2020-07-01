@@ -16,5 +16,6 @@ sub n_lines {
 
 
 
-print n_lines(3);
+print n_lines($ARGV[0]);
+
 
