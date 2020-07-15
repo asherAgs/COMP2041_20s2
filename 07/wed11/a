@@ -1,0 +1,39 @@
+hi                      i       STDOUT
+("h","e","l","l","o")   0       h
+                        1       e
+                        2       l
+                        3       l
+                        4       "\n"
+
+
+
+@hi = split //,"hello";
+for ($i = 0; $i < 4; $i++) {
+    print $hi[$i];
+}
+print "\n";
+
+
+
+
+n       i       STDOUT
+1               "1 "
+                "1 "
+2               "2 "
+3               "3 "
+                "3 "
+4               "4 "
+5               "5 "
+                "5 "
+6               "\n"
+
+
+
+
+foreach $n (1..10) {
+    die if ($n > 5);
+    print "$n ";
+    next if ($n % 2 == 0);
+    print "$n ";
+}
+print "\n";
