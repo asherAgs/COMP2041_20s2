@@ -1,14 +1,21 @@
 #!/bin/bash
 
 # Validate: have an arg and is a directory
-if (test "$#" -ne 1) || !(test -d $1)
+if (test "$#" -gt 2) || (test "$#" -eq 0) || !(test -d $1)
 then
-    echo "Usage: $0 DIR"
+    echo "Usage: $0 DIR [OUT_DIR]"
     exit 1
 fi
 
 dir=$1
-new_dir=$(echo "$dir/"$(date "+%a%H")"_"$$)
+
+if test "$#" -eq 2 
+then
+    new_dir="$dir/$2"
+else
+    new_dir=$(echo "$dir/"$(date "+%a%H")"_"$$)
+fi
+
 
 if test -e "$new_dir"
 then
