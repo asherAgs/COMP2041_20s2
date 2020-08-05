@@ -1,0 +1,14 @@
+CC = gcc-4.4
+CFLAGS = -Wall -O3
+
+
+hummus:  main.o module.o defs.h
+	$(CC) -o $@ main.o module.o
+
+main.o:  main.c module.h defs.h
+	$(CC) -c main.c
+
+module.o:  module.c module.h defs.h
+	$(CC) -c module.c
+
+graphics.o: graphics.h world.h graphics.c

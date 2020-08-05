@@ -1,0 +1,11 @@
+$CC=gcc-4.4
+myapp:  main.o module.o defs.h
+$CC -c -o $< main.o module.o
+
+main.o:  module.h module.c defs.h
+$CC -c main.o
+
+module.o:  module.h defs.h
+$CC -c main.o
+
+main.c:  defs.h
